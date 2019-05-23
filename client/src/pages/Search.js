@@ -1,16 +1,16 @@
 import React, { Component } from "react";
 import API from "../utils/API";
-import { Link } from "react-router-dom";
-import { Container } from "../components/Grid";
 import { List, CardItem } from "../components/List";
 import Jumbotron from "../components/Jumbotron";
 import { Input, FormBtn } from "../components/Form";
+import "../style.css";
+
 
 class Search extends Component {
   state = {
     books: [],
     results: [],
-    search: ""
+    search: "",
   };
 
   defaultImg = "https://mtf.plusrewards.com.au.mastercard.com/storage/documents/ebooks-default-img.svg";
@@ -31,7 +31,6 @@ class Search extends Component {
     event.preventDefault();
     API.searchBooks(this.state.search)
       .then(res => {
-        console.log(res);
         this.filterResults();
         this.setState({results: res.data.items});
       })
@@ -66,13 +65,18 @@ class Search extends Component {
     
   };
 
+  onStarClick(nextValue, prevValue, name) {
+    this.setState({rating: nextValue});
+    console.log(this.state.rating);
+  }
+
   render() {
     return (
-      <Container fluid>
+      <>
         <Jumbotron>
           <h1>Book Search</h1>
 
-          <form className="form-inline">
+          <form className="form-inline" style={{justifyContent:"center", padding:"10px"}} >
               <Input 
                 value={this.state.search}
                 onChange={this.handleInputChange}
@@ -89,6 +93,7 @@ class Search extends Component {
 
           <h4>Use the GoogleBooks API to search for new and exciting literature!</h4>
 
+
         </Jumbotron>
             <div>
               {this.state.results.length ? (
@@ -102,6 +107,8 @@ class Search extends Component {
                       title={result.volumeInfo.title}
                       author={result.volumeInfo.authors}
                       description={result.volumeInfo.description}
+                      rating={!result.rating? 0 : result.rating}
+                      rateBooks={this.onStarClick}
                       saveBook={this.saveBook}
                       saved={(this.filterResults(result.id))? "saved" : "not saved"}
                     >
@@ -109,10 +116,10 @@ class Search extends Component {
                   ))}
                 </List>
               ) : (
-                <h3>No Results to Display</h3>
+                <h3 className="results-message">No results to display</h3>
               )}
             </div>
-      </Container>
+      </>
     );
   }
 }

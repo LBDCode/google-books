@@ -3,8 +3,7 @@ import { DeleteBtn } from "../components/DeleteBtn";
 import API from "../utils/API";
 import Jumbotron from "../components/Jumbotron";
 import { Link } from "react-router-dom";
-import { Container } from "../components/Grid";
-import { List, ListItem, CardItem } from "../components/List";
+import { List, ListItem } from "../components/List";
 
 class Saved extends Component {
     state = {
@@ -33,7 +32,7 @@ class Saved extends Component {
 
     render() {
       return (
-        <Container fluid>
+        <>
             <Jumbotron>
                 <h1>User Library</h1>
                 <h4>View books you've already saved.</h4>
@@ -56,7 +55,7 @@ class Saved extends Component {
                 <h3>No Results to Display</h3>
               )}
             </div>  
-        </Container>
+        </>
       );
     }
   }

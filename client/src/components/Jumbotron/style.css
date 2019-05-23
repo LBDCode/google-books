@@ -1,0 +1,11 @@
+.custom-jumbo {
+    clear: both;
+    text-align: center;
+    align-content:center;
+    justify-content:center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background: linear-gradient(rgba(238, 235, 235, 0.3), rgba(238, 235, 235, 0.3)),
+    url('./books2.jpg');
+}
