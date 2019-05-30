@@ -19,7 +19,7 @@ export function NavListRight({ children }) {
     );
 }
 
-export function RightListItem({ children}) {
+export function NavListItem({ children}) {
     return (
         <li className="nav-item">{children}</li>
     )

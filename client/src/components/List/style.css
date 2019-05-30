@@ -1,9 +1,13 @@
-.list-overflow-container {
-  max-height: 545px;
-  border: 1px #DDDDDD solid;
-  border-radius: 4px;
-  overflow-y: scroll;
-  overflow-x: hidden;
+.btn-custom {
+  background-color: #222c;
+  margin: 2px;
+  color: #fff;
+}
+
+.btn-saved {
+  background-color: rgba(77, 72, 72, 0.342);
+  margin: 2px;
+  color: #222c;
 }
 
 .list-overflow-container ul {
@@ -11,6 +15,7 @@
 }
 
 .list-overflow-container li {
+  padding: 10px;
   border-radius: 0px;
   border-left: none;
   border-right: none;

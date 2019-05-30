@@ -21,7 +21,14 @@ export function CardItem(props) {
         <img src={props.image} className="mr-3" alt="..."/>
         <div className="media-body">
             <h5 className="mt-0 mb-1">{(!props.title) ? "" : props.title }</h5>
-            <h6>{(!props.author) ? "Author unknown" : props.author.map(auth => (auth + " "))}</h6>  
+            <h6>{(!props.author) ? "Author unknown" : props.author.map(auth => (auth + " "))}</h6> 
+            <a href={props.link} target="blank"><button className="btn btn-custom btn-sm">View</button></a>
+            {(props.saved === "not saved") ? 
+              <button className="btn btn-custom btn-sm" onClick={()=>props.saveBook(props)}>Save</button>
+              :  
+              <button className="btn btn-saved btn-sm">Saved</button>
+
+            } 
             <Stars
               name={props.title}
               value={props.rating}
@@ -29,9 +36,7 @@ export function CardItem(props) {
             />
             <p>{(!props.description) ? "" : props.description}</p>
         </div>
-        <a href={props.link} target="blank"><button>View</button></a>
-        {(props.saved === "not saved") ? <button onClick={()=>props.saveBook(props)}>Save</button>
-        :  <span tabIndex="0"> saved to library</span>}
+
 
       </li>
   );

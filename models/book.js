@@ -13,6 +13,7 @@ const bookSchema = new Schema({
     max: 5
   },
   notes: String,
+  _id: false
 });
 
 const userSchema = new Schema({

@@ -4,8 +4,15 @@
     align-content:center;
     justify-content:center;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
-    background: linear-gradient(rgba(238, 235, 235, 0.3), rgba(238, 235, 235, 0.3)),
-    url('./books2.jpg');
+    background: url('./book3.jpg');
+    height:400px;
+}
+
+h1 {
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 80px!important;
+    font-family: 'Dancing Script', cursive;
 }

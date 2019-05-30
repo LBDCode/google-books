@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import API from "../../utils/API";
-import { Navbar, NavListRight, RightListItem } from "../NavElems"
-import { Modal } from "../Login";
+import { Navbar, NavListRight, NavListItem } from "../NavElems"
+import { Modal, ModalTabList } from "../Login";
+import { LoginInput, FormBtn } from "../Form";
 import "./style.css";
 
 
@@ -10,17 +11,29 @@ class Nav extends Component {
     super(props);
  
     this.state = {
-      user: "libby",
+      user: "",
+      loginEmail: "",
+      loginPassword: "",
+      signupEmail: "",
+      signupPassword:""
     };
   };
 
+  handleInputChange = event => {
+    const { name, value } = event.target;
+    this.setState({
+      [name]: value
+    });
+    
+  };
+
   newUser = (email) => {
-    console.log(email);
-    // API.createUser(email)
-    //   .then(res =>
-    //     this.setState({ user: res.data })
-    //   )
-    //   .catch(err => console.log(err));  
+    const newUser = {"email": email}
+    API.createUser(newUser)
+      .then(res =>
+        this.setState({user: email})
+      )
+      .catch(err => console.log(err));  
   };
 
   render() {
@@ -41,75 +54,83 @@ class Nav extends Component {
           <a href="/" className="navbar-brand cust-text mx-auto d-block text-center order-0 order-md-1 w-25">MyLibrary</a>
           
           <NavListRight>
-            <RightListItem>
+            <NavListItem>
               <a className="nav-link cust-link" href="/search">search</a>
-            </RightListItem>
-            <RightListItem>
+            </NavListItem>
+            <NavListItem>
               <a className="nav-link cust-link" href="/saved">library</a>
-            </RightListItem>
-            <RightListItem>
+            </NavListItem>
+            <NavListItem>
               {this.state.user === "" ? 
                 <a className="nav-link cust-link" href="#" data-toggle="modal" data-target="#loginModal">sign in</a>
               :
                 <a className="nav-link cust-link" href="#" data-toggle="modal" data-target="#loginModal">sign out</a>
               }
-            </RightListItem>
+            </NavListItem>
           </NavListRight>
 
           <Modal>
             <div className="modal-header">
-              <ul className="nav nav-tabs" id="myTab" role="tablist">
-                  <li className="nav-item">
-                    <a className="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Login</a>
-                  </li>
-                  <li className="nav-item">
-                    <a className="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Signup</a>
-                  </li>
-              </ul>
+              <ModalTabList>
+                <NavListItem>
+                  <a className="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Login</a>
+                </NavListItem>
+                <NavListItem>
+                  <a className="nav-link" id="profile-tab" data-toggle="tab" href="#profile" role="tab" aria-controls="profile" aria-selected="false">Signup</a>
+                </NavListItem>
+              </ModalTabList>
               <button type="button" className="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
               </button>
             </div>
-                <div className="modal-body">
-
-
-                  <div className="tab-content" id="myTabContent">
-                    <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-                      <form>
-                        <div className="form-group">
-                          <label for="exampleInputEmail1">Email address</label>
-                          <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-                          <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
-                        </div>
-                        <div className="form-group">
-                          <label for="exampleInputPassword1">Password</label>
-                          <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
-                        </div>
-                        <button type="button" className="btn btn-primary">Login</button>
-                        <button type="button" className="btn btn-secondary" data-dismiss="modal">Continue as Guest</button>
-                      </form>
-                    </div>
-                    <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-                      <form>
-                        <div className="form-group">
-                          <label for="exampleInputEmail1">Email address</label>
-                          <input type="email" className="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email"/>
-                          <small id="emailHelp" className="form-text text-muted">We'll never share your email with anyone else.</small>
-                        </div>
-                        <div className="form-group">
-                          <label for="exampleInputPassword1">Password</label>
-                          <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
-                        </div>
-                        <div className="form-group">
-                          <label for="exampleInputPassword1">Re-enter Password</label>
-                          <input type="password" className="form-control" id="exampleInputPassword1" placeholder="Password"/>
-                        </div>
-                        <button type="button" class="btn btn-primary">Signup</button>
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Continue as Guest</button>
-                      </form>
-                    </div>
-                  </div>
+            <div className="modal-body">
+              <div className="tab-content" id="myTabContent">
+                <div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
+                  <form>
+                    <LoginInput
+                      id="loginEmail"
+                      placeholder="Email"
+                      type="email"
+                      name="loginEmail"
+                      value={this.state.loginEmail}
+                      onChange={this.handleInputChange}
+                    />
+                    <LoginInput
+                      id="loginPassword"
+                      placeholder="Password"
+                      type="password"
+                      name="loginPassword"
+                      value={this.state.loginPassword}
+                      onChange={this.handleInputChange}
+                    />
+                    <FormBtn type="button" className="btn btn-primary" id="loginBtn" onClick={() => this.newUser(this.state.loginEmail)}>Login</FormBtn>
+                    <FormBtn type="button" className="btn btn-secondary" id="guestBtn" data-dismiss="modal">Continue as Guest</FormBtn>
+                  </form>
                 </div>
+                <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
+                  <form>
+                    <LoginInput
+                        id="signupEmail"
+                        placeholder="Email"
+                        type="email"
+                        name="signupEmail"
+                        value={this.state.signupEmail}
+                        onChange={this.handleInputChange}
+                      />
+                      <LoginInput
+                        id="signupPassword"
+                        placeholder="Password"
+                        type="password"
+                        name="signupPassword"
+                        value={this.state.signupPassword}
+                        onChange={this.handleInputChange}
+                      />
+                    <FormBtn type="button" className="btn btn-primary" id="signupBtn">Sign Up</FormBtn>
+                    <FormBtn type="button" className="btn btn-secondary" id="guestBtn" data-dismiss="modal">Continue as Guest</FormBtn>
+                  </form>
+                </div>
+              </div>
+            </div>
           </Modal>
         </Navbar>
     )

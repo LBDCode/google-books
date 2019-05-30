@@ -11,6 +11,7 @@ class Search extends Component {
     books: [],
     results: [],
     search: "",
+    user: "libby2@libby.com"
   };
 
   defaultImg = "https://mtf.plusrewards.com.au.mastercard.com/storage/documents/ebooks-default-img.svg";
@@ -20,9 +21,9 @@ class Search extends Component {
   }
 
   loadBooks = () => {
-    API.getBooks()
+    API.getUserBooks(this.state.user)
       .then(res =>
-        this.setState({ books: res.data })
+        this.setState({ books: res.data.favorites })
       )
       .catch(err => console.log(err));  
   };
@@ -54,7 +55,9 @@ class Search extends Component {
   };
 
   saveBook = p => {
-    API.saveBook({
+    API.saveUserBook(
+      this.state.user,
+      {
       googleID: p.googleID,
       title: p.title,
       author: p.author,
@@ -74,8 +77,8 @@ class Search extends Component {
     return (
       <>
         <Jumbotron>
-          <h1>Book Search</h1>
-
+          <h1>Bibliofile</h1>
+          <h4>Keep your reading list organized and up to date.</h4>
           <form className="form-inline" style={{justifyContent:"center", padding:"10px"}} >
               <Input 
                 value={this.state.search}
@@ -86,39 +89,38 @@ class Search extends Component {
               <FormBtn
                 disabled={!(this.state.search)}
                 onClick={this.searchBooks}
+                className="btn btn-dark my-2 my-sm-0"
               >
                 Search
               </FormBtn>
           </form>
-
-          <h4>Use the GoogleBooks API to search for new and exciting literature!</h4>
-
-
         </Jumbotron>
-            <div>
-              {this.state.results.length ? (
-                <List>
-                  {this.state.results.map(result => (
-                    <CardItem
-                      key={result.id}
-                      googleID={result.id}
-                      link={result.volumeInfo.previewLink}
-                      image={(!result.volumeInfo.imageLinks)? this.defaultImg : result.volumeInfo.imageLinks.thumbnail}
-                      title={result.volumeInfo.title}
-                      author={result.volumeInfo.authors}
-                      description={result.volumeInfo.description}
-                      rating={!result.rating? 0 : result.rating}
-                      rateBooks={this.onStarClick}
-                      saveBook={this.saveBook}
-                      saved={(this.filterResults(result.id))? "saved" : "not saved"}
-                    >
-                    </CardItem>
-                  ))}
-                </List>
-              ) : (
-                <h3 className="results-message">No results to display</h3>
-              )}
-            </div>
+        <div className="container">
+          <div>
+            {this.state.results.length ? (
+              <List>
+                {this.state.results.map(result => (
+                  <CardItem
+                    key={result.id}
+                    googleID={result.id}
+                    link={result.volumeInfo.previewLink}
+                    image={(!result.volumeInfo.imageLinks)? this.defaultImg : result.volumeInfo.imageLinks.thumbnail}
+                    title={result.volumeInfo.title}
+                    author={result.volumeInfo.authors}
+                    description={result.volumeInfo.description}
+                    rating={!result.rating? 0 : result.rating}
+                    rateBooks={this.onStarClick}
+                    saveBook={this.saveBook}
+                    saved={(this.filterResults(result.id))? "saved" : "not saved"}
+                  >
+                  </CardItem>
+                ))}
+              </List>
+            ) : (
+              <h3 className="results-message">No results to display</h3>
+            )}
+          </div>
+        </div>  
       </>
     );
   }

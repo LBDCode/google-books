@@ -3,7 +3,7 @@ import "./style.css";
 
 function Jumbotron({ children }) {
   return (
-    <div className="jumbotron custom-jumbo">
+    <div className="jumbotron custom-jumbo" >
       {children}
     </div>
   );

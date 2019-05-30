@@ -9,7 +9,8 @@ class Saved extends Component {
     state = {
       books: [],
       results: [],
-      search: ""
+      search: "",
+      user: "libby2@libby.com"
     };
   
     componentDidMount() {
@@ -17,15 +18,15 @@ class Saved extends Component {
     }
   
     loadBooks = () => {
-      API.getBooks()
+      API.getUserBooks(this.state.user)
         .then(res =>
-          this.setState({ books: res.data })
+          this.setState({ books: res.data.favorites })
         )
         .catch(err => console.log(err));  
     };
   
     deleteBook = id => {
-      API.deleteBook(id)
+      API.deleteBook(this.state.user, id)
         .then(res => this.loadBooks())
         .catch(err => console.log(err));
     };
@@ -41,13 +42,13 @@ class Saved extends Component {
               {this.state.books.length ? (
                 <List>
                   {this.state.books.map(book => (
-                    <ListItem key={book._id}>
-                      <Link to={"/books/" + book._id}>
+                    <ListItem key={book.googleID}>
+                      <Link to={"/books/" + book.googleID}>
                         <strong>
                           {book.title} by {book.author}
                         </strong>
                       </Link>
-                      <DeleteBtn onClick={() => this.deleteBook(book._id)} />
+                      <DeleteBtn onClick={() => this.deleteBook(book.googleID)} />
                     </ListItem>
                   ))}
                 </List>

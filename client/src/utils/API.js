@@ -1,11 +1,12 @@
 import axios from "axios";
 
 export default {
-  // Gets all books
-  getBooks: function() {
-    return axios.get("/api/books");
+
+  //gets user books - working
+  getUserBooks: function(email) {
+    return axios.get("/api/books/user/" + email);
   },
-  //search for books
+  //search for books - working
   searchBooks: function(q) {
     const apiURL = "https://www.googleapis.com/books/v1/volumes?";
     const apiKey = "&key=AIzaSyALT3IQvbkQs5TifbVM8LfyjCKQIgpA9Ns";
@@ -14,17 +15,18 @@ export default {
   },
   // Gets the book with the given id
   getBook: function(id) {
-    return axios.get("/api/books/" + id);
+    return axios.get("/api/books/book/" + id);
   },
-  // Deletes the book with the given id
-  deleteBook: function(id) {
-    return axios.delete("/api/books/" + id);
+  // Deletes the book with the given id - working
+  deleteBook: function(user, bookID) {
+    return axios.put("/api/books/remove", {user: user, book:bookID});
   },
-  // Saves a book to the database
-  saveBook: function(bookData) {
-    return axios.post("/api/books", bookData);
+  // Saves a book to the user - working
+  saveUserBook: function(user, bookData) {
+    return axios.put("/api/books/user/" + user, {"email": user, "book": bookData});
   },
+  //creates a user - working
   createUser: function(userData) {
-    return axios.post("/api/books/create", userData)
+    return axios.post("/api/books/users", userData)
   }
 };
