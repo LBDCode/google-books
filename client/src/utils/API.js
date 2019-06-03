@@ -14,16 +14,17 @@ export default {
     return axios.get(apiURL + query + apiKey);
   },
   // Gets the book with the given id
-  getBook: function(id) {
-    return axios.get("/api/books/book/" + id);
+  getBook: function(user, bookID) {
+    console.log(user, bookID);
+    return axios.get("/api/books/user/" + user + "/" + bookID);
   },
   // Deletes the book with the given id - working
   deleteBook: function(user, bookID) {
-    return axios.put("/api/books/remove", {user: user, book:bookID});
+    return axios.delete("/api/books/user/" + user + "/" + bookID);
   },
   // Saves a book to the user - working
-  saveUserBook: function(user, bookData) {
-    return axios.put("/api/books/user/" + user, {"email": user, "book": bookData});
+  saveUserBook: function(user, bookID, bookData) {
+    return axios.put("/api/books/user/" + user + "/" + bookID, {"email": user, "bookData": bookData});
   },
   //creates a user - working
   createUser: function(userData) {

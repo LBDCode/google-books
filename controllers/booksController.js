@@ -6,41 +6,37 @@ module.exports = {
   findAll: function(req, res) {
     db.Schema.User.findOne({ email: req.params.email })
       .then(dbModel => {
-        console.log("result: " + dbModel);
         res.json(dbModel);
       })
       .catch(err => res.status(422).json(err));
   },
+  //working
   findById: function(req, res) {
-    db.Schema.User.find({
-      "email": req.body.email,
-      "favorites.googleID": req.body.id
-    })
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
-  create: function(req, res) {
-    db.Schema.Book.create(req.body)
-      .then(dbModel => res.json(dbModel))
+    db.Schema.User.find(
+      {"email": req.params.email}, 
+      {"favorites" : { $elemMatch: {"googleID": req.params.book}}})
+      .then(dbModel => {
+        res.json(dbModel[0].favorites);
+      })
       .catch(err => res.status(422).json(err));
   },
   //working
   createUser: function(req, res) {
-    // console.log(req.body);
     db.Schema.User.create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  //allows duplcation, doesn't search by googleID
+  //add to favs is working - confirm edit is working
   manageUserBook: function(req, res) {
-    db.Schema.User.findOne({
-      email: req.body.email,
-      favorites: { $in: req.body.book}
-    }).then(found => {
+    console.log(req.body.email, req.body.book);
+    db.Schema.User.findOne(
+      {"email": req.params.email, "favorites.googleID": req.params.book }
+    ).then(found => {
       if (found) {
-        db.Schema.User.findOneAndUpdate(
-          { email: req.body.email },
-          { $pull: { favorites: req.body.book} }
+        console.log("found: " + req.params.book);
+        db.Schema.User.update(
+          { "email": email, "favorites.googleID": book },
+          { $set: { favorites: {googleID: book}}}
         )
           .then(dbModel => {
             res.json(dbModel);
@@ -48,13 +44,13 @@ module.exports = {
           })
           .catch(err => res.status(422).json(err));
       } else {
+        console.log("update: " + req.params.book);
         db.Schema.User.findOneAndUpdate(
           { email: req.body.email },
-          { $addToSet: { favorites: req.body.book} }
+          { $addToSet: { favorites: req.body.bookData} }
         )
           .then(dbModel => {
             res.json(dbModel);
-            console.log("added: " + dbModel);
           })
           .catch(err => res.status(422).json(err));
       }
@@ -67,8 +63,8 @@ module.exports = {
   },
   //working
   remove: function(req, res) {
-    var email = req.body.user;
-    var book = req.body.book;
+    var email = req.params.email;
+    var book = req.params.book;
     db.Schema.User.update(
       { "email": email, "favorites.googleID": book },
       { $pull: { favorites: {googleID: book}}},

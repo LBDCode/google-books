@@ -56,7 +56,7 @@ class Search extends Component {
 
   saveBook = p => {
     API.saveUserBook(
-      this.state.user,
+      this.state.user, p.googleID,
       {
       googleID: p.googleID,
       title: p.title,

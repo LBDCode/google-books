@@ -6,12 +6,14 @@ import API from "../utils/API";
 
 class Detail extends Component {
   state = {
+    user: "libby2@libby.com",
     book: {}
   };
 
   componentDidMount() {
-    API.getBook(this.props.match.params.id)
-      .then(res => this.setState({ book: res.data }))
+    API.getBook(this.state.user, this.props.match.params.id)
+      // .then(res => console.log(res.data[0]))
+      .then(res => this.setState({ book: res.data[0] }))
       .catch(err => console.log(err));
   }
 
