@@ -3,6 +3,7 @@ const Schema = mongoose.Schema;
 
 const bookSchema = new Schema({
   googleID: {type: String, required: true},
+  imageURL: String,
   title: { type: String, required: true },
   author: { type: String, required: true },
   description: String,

@@ -1,5 +1,5 @@
-import React from "react";
-import Stars from '../Stars';
+import React, { Component } from "react";
+import StarRatingComponent from 'react-star-rating-component';
 import "./style.css";
 
 export function List({ children }) {
@@ -14,30 +14,58 @@ export function ListItem({ children }) {
   return <li className="list-group-item">{children}</li>;
 }
 
-export function CardItem(props) {
+export class CardItem extends Component {
+  constructor(props) {
+    super(props);
+ 
+    this.onStarClick = this.onStarClick.bind(this);
 
-  return (
+    this.state = {
+      book: props,
+      rating: props.stars,
+    };
+  }
+
+  componentDidMount() {
+    console.log(this.state.book);
+    console.log(this.state.rating);
+  }
+
+  onStarClick(nextValue, prevValue, name) {
+    console.log(this.state.book.stars)
+    this.setState({rating: nextValue});
+  };
+
+
+  render() {
+    const { rating } = this.state;
+    const props = this.props;
+
+    return (
       <li className="media">
         <img src={props.image} className="mr-3" alt="..."/>
         <div className="media-body">
             <h5 className="mt-0 mb-1">{(!props.title) ? "" : props.title }</h5>
             <h6>{(!props.author) ? "Author unknown" : props.author.map(auth => (auth + " "))}</h6> 
-            <a href={props.link} target="blank"><button className="btn btn-custom btn-sm">View</button></a>
+            <a href={props.link} target="blank"><button className="btn btn-custom btn-sm">Preview</button></a>
             {(props.saved === "not saved") ? 
-              <button className="btn btn-custom btn-sm" onClick={()=>props.saveBook(props)}>Save</button>
+              <button className="btn btn-custom btn-sm" onClick={()=>props.saveBook(props, this.state.rating)}>Save</button>
               :  
-              <button className="btn btn-saved btn-sm">Saved</button>
-
+              <button className="btn btn-delete btn-sm" onClick={() => props.deleteBook(props)}>Delete</button>
             } 
-            <Stars
-              name={props.title}
-              value={props.rating}
-              rateBooks={props.rateBooks}
-            />
+            <div>
+              <StarRatingComponent
+                name={props.title} 
+                starCount={5}
+                value={rating}
+                onStarClick={this.onStarClick}
+              />
+            </div>
             <p>{(!props.description) ? "" : props.description}</p>
         </div>
 
-
       </li>
-  );
+    );
+
+  }
 }

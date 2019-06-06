@@ -10,7 +10,7 @@ export function Input(props) {
       <input className="form-control" {...props} />
     </div>
   );
-}
+};
 
 export function LoginInput(props) {
   return (
@@ -20,9 +20,7 @@ export function LoginInput(props) {
     </div>
 
   );
-}
-
-
+};
 
 export function FormBtn(props) {
   return (
@@ -32,6 +30,6 @@ export function FormBtn(props) {
       {props.children}
     </button>
   );
-}
+};
 
 

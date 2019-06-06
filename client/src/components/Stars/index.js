@@ -15,14 +15,6 @@ class Stars extends Component {
     const { rating, name } = this.state;
     const props = this.props;
     return (                
-      <div>
-        <StarRatingComponent 
-          name={props.name} 
-          starCount={5}
-          value={rating}
-          onStarClick={props.rateBooks.bind(this)}
-        />
-      </div>
     );
   }
 }

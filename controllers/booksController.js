@@ -26,7 +26,7 @@ module.exports = {
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  //add to favs is working - confirm edit is working
+  //add to favs is working for everything except rating - confirm edit is working
   manageUserBook: function(req, res) {
     console.log(req.body.email, req.body.book);
     db.Schema.User.findOne(

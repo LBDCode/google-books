@@ -4,7 +4,7 @@ export default {
 
   //gets user books - working
   getUserBooks: function(email) {
-    return axios.get("/api/books/user/" + email);
+    return axios.get("/api/books/users/" + email);
   },
   //search for books - working
   searchBooks: function(q) {
@@ -24,6 +24,7 @@ export default {
   },
   // Saves a book to the user - working
   saveUserBook: function(user, bookID, bookData) {
+    console.log(bookData);
     return axios.put("/api/books/user/" + user + "/" + bookID, {"email": user, "bookData": bookData});
   },
   //creates a user - working

@@ -1,12 +1,16 @@
 .cust-link {
-  color: rgb(190, 37, 37)!important;
+  color: #aaa!important;
   padding: 10px;
 }
 
 .cust-nav {
-  background-color: grey!important;
+  background-color: #222!important;
 }
 
 .cust-text {
   color: #fff!important;
+  font-family: 'Dancing Script', cursive;
+  text-transform: none;
+  font-size: 30px;
+  font-weight: 500;
 }

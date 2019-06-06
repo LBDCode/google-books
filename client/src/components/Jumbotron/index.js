@@ -1,13 +1,19 @@
 import React from "react";
 import "./style.css";
 
-function Jumbotron({ children }) {
+export function Jumbotron({ children }) {
   return (
     <div className="jumbotron custom-jumbo" >
       {children}
     </div>
   );
-}
+};
 
-export default Jumbotron;
+export function SmallJumbotron({ children }) {
+  return (
+    <div className="jumbotron custom-small-jumbo" >
+      {children}
+    </div>
+  );
+};
 

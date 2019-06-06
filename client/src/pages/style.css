@@ -1,0 +1,103 @@
+.title {
+    white-space: normal !important;
+    line-height: 1.5!important;
+    font-size: 14px!important;
+}
+
+.home-buttons {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.author {
+    white-space: normal !important;
+    line-height: 1.5!important;
+    font-size: 14px!important; 
+}
+
+.btn-custom {
+    background-color: #222c;
+    margin: 2px;
+    color: #fff;
+  }
+  
+.btn-delete {
+    background-color: rgba(77, 72, 72, 0.342);
+    margin: 2px;
+    color: #222c;
+}
+
+.actions {
+    white-space: normal !important;
+    line-height: .8!important;
+}
+
+.edit {
+    color: blue;
+}
+
+.delete {
+    color: red;
+}
+
+.delete :hover {
+    text-decoration:underline; 
+}
+
+.actions P {
+    margin-bottom: 10px!important;
+}
+
+.ag-header-cell-label {
+    justify-content: center;
+}
+
+.ag-row .ag-cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-message {
+    margin: 30px auto;
+    justify-content: center;
+    max-width: 600px;
+    background-color: #fff;
+    font-size: 14px;
+}
+
+.message {
+    height: 200px;
+    padding: 20px 10px;
+}
+
+.main-message {
+    background-color: #4950571f;
+}
+
+.book-details {
+    margin-top: 20px;
+    margin-left: 50px;
+    max-width: 800px;
+}
+
+.book-title {
+    margin-top: 40px;
+    margin-bottom: 12px;
+}
+
+@media only screen and (max-width: 450px) {
+    .book-details {
+        margin-top: 30px;
+        margin-left: 5px;
+        max-width: 800px;
+    }
+    
+    .book-title {
+        margin-top: 20px;
+        margin-bottom: 12px;
+        font-size: 24px;
+    }
+}
+
+

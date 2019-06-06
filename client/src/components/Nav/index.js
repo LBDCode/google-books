@@ -43,15 +43,10 @@ class Nav extends Component {
                 <span className="navbar-toggler-icon"></span>
           </button>
 
-          <div className="navbar-collapse collapse dual-nav w-50 order-1 order-md-0">
-            <ul className="navbar-nav">
-              <li className="navbar-text">
-                Keep your reading list organized and up to date
-              </li>
-            </ul>
+          <div className="navbar-collapse collapse dual-nav  order-1 order-md-0">
+            <a href="/" className="navbar-brand cust-text d-block order-0 order-md-1 ">Bibliofile</a>
           </div>
 
-          <a href="/" className="navbar-brand cust-text mx-auto d-block text-center order-0 order-md-1 w-25">MyLibrary</a>
           
           <NavListRight>
             <NavListItem>
