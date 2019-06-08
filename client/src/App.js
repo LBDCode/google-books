@@ -11,12 +11,31 @@ function App() {
   return (
     <Router>
       <div>
-        <Nav />
         <Switch>
-          <Route exact path="/" component={Home} />
-          <Route exact path="/search" component={Search} />
-          <Route exact path="/saved" component={Saved} />
-          <Route exact path="/books/:id" component={Detail} />
+          <Route exact path="/" render={props =>
+            <div>
+              <Nav />
+              <Home />
+            </div> }
+          />
+          <Route exact path="/search" render={props =>
+            <div>
+              <Nav />
+              <Search />
+            </div> }
+          />
+          <Route exact path="/saved" render={props =>
+            <div>
+              <Nav />
+              <Saved />
+            </div> } 
+          />
+          <Route exact path="/books/:id" render={props =>
+            <div>
+              <Nav />
+              <Detail {...props}/>
+            </div> } 
+          />
           <Route component={NoMatch} />
         </Switch>
       </div>

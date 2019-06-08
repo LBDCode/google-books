@@ -15,17 +15,39 @@
     font-size: 14px!important; 
 }
 
+.btn-home {
+    background-color: #22b24c;
+    margin: 2px;
+    padding: 10px 20px;
+    color: #fff;
+}
+
 .btn-custom {
     background-color: #222c;
     margin: 2px;
     color: #fff;
-  }
+}
   
 .btn-delete {
     background-color: rgba(77, 72, 72, 0.342);
     margin: 2px;
     color: #222c;
 }
+
+.no-match {
+    clear: both;
+    text-align: center;
+    align-content:center;
+    justify-content:center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background: url('./404.png');
+    height:100vh;
+    padding-top: 200px;
+}
+
+
 
 .actions {
     white-space: normal !important;
@@ -61,9 +83,13 @@
 .home-message {
     margin: 30px auto;
     justify-content: center;
-    max-width: 600px;
-    background-color: #fff;
+    max-width: 900px;
+    /* background-color: #fff; */
     font-size: 14px;
+}
+
+.home-about {
+    margin: 30px;
 }
 
 .message {
