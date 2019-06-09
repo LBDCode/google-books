@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import { List, CardItem } from "../components/List";
 import {SmallJumbotron }from "../components/Jumbotron";
-import { Input, FormBtn } from "../components/Form";
+import { Input, FormBtn, CheckBox, CheckboxDiv } from "../components/Form";
 import "../style.css";
 
 
@@ -11,6 +11,7 @@ class Search extends Component {
     books: [],
     results: [],
     search: "",
+    filter: "",
     user: "libby2@libby.com",
   };
 
@@ -29,9 +30,14 @@ class Search extends Component {
       .catch(err => console.log(err));  
   };
 
+  setSearchFilter = () => {
+    this.setState( {filter: "free-ebooks"});
+    console.log(this.state.filter);
+  };
+
   searchBooks = event => {
     event.preventDefault();
-    API.searchBooks(this.state.search)
+    API.searchBooks(this.state.search, this.state.filter)
       .then(res => {
         this.filterResults();
         this.setState({results: res.data.items});
@@ -82,25 +88,54 @@ class Search extends Component {
     return (
       <>
         <SmallJumbotron>
-          <h2>Book Search</h2>
-          <form className="form-inline" style={{justifyContent:"center", padding:"10px"}} >
+          <h3 style={{color:"#fff"}}>Book Search</h3>
+          <form >
               <Input 
                 value={this.state.search}
                 onChange={this.handleInputChange}
                 name="search"
                 placeholder="Search"
               />
+              <CheckboxDiv>
+                <CheckBox
+                  id="partial"
+                  text="Preview available"
+                  onChange={this.setSearchFilter}
+                >
+                </CheckBox>
+                <CheckBox
+                  id="free-ebooks"
+                  text="Free eBook available"
+                  onChange={this.setSearchFilter}
+
+                >
+                </CheckBox>
+                <CheckBox
+                  id="paid-ebooks"
+                  text="eBook available for purchase"
+                  onChange={this.setSearchFilter}
+                >
+                </CheckBox>
+                </CheckboxDiv>
               <FormBtn
                 disabled={!(this.state.search)}
                 onClick={this.searchBooks}
-                className="btn btn-dark my-2 my-sm-0"
+                className="btn btn-success my-2 my-sm-0"
+                style={{display:"block"}}
               >
                 Search
               </FormBtn>
           </form>
-          <h4 style={{color: "#495057", marginTop:"20px"}}>Use the GoogleBooks API to find new, exciting literature.</h4>
         </SmallJumbotron>
+
         <div className="container">
+          <div>
+            <h4 style={{color: "#495057", marginTop:"20px", textAlign: 'center'}}>How to use the GoogleBooks API to find new, exciting literature.</h4>
+            <strong>Simple Search: </strong> <br/>
+            <strong>Keywords: </strong>use intitle, inauthor, and insubject (eg insubject:plants) to return results where the text following 
+            the colon is found in the title, author, or subject.<br/>
+            <strong>Filters: </strong>use the checkboxes to restrict results to books that have a preview or ebook available through GoogleBooks.
+          </div>
           <div>
             {this.state.results.length ? (
               <List>

@@ -15,19 +15,19 @@ function App() {
           <Route exact path="/" render={props =>
             <div>
               <Nav />
-              <Home />
+              <Home {...props}/>
             </div> }
           />
           <Route exact path="/search" render={props =>
             <div>
               <Nav />
-              <Search />
+              <Search {...props}/>
             </div> }
           />
           <Route exact path="/saved" render={props =>
             <div>
               <Nav />
-              <Saved />
+              <Saved {...props}/>
             </div> } 
           />
           <Route exact path="/books/:id" render={props =>

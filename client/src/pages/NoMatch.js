@@ -9,7 +9,7 @@ function NoMatch() {
   return (
     <div className="no-match">
         <h3>Page not Found</h3>
-        <button className="btn btn-home" onClick={ () => this.props.history.push('/home') }>Get back on track</button>
+        <button className="btn btn-home" onClick={ () => this.props.history.push('/home') }>Home</button>
 
     </div>
   );

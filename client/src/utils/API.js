@@ -7,11 +7,13 @@ export default {
     return axios.get("/api/books/users/" + email);
   },
   //search for books - working
-  searchBooks: function(q) {
+  searchBooks: function(q, f) {
+    console.log(q, f);
     const apiURL = "https://www.googleapis.com/books/v1/volumes?";
     const apiKey = "&key=AIzaSyALT3IQvbkQs5TifbVM8LfyjCKQIgpA9Ns";
     let query = "q=" + q;
-    return axios.get(apiURL + query + apiKey);
+    let filter = "&filter=" + f;
+    return axios.get(apiURL + query + filter + apiKey);
   },
   // Gets the book with the given id
   getBook: function(user, bookID) {

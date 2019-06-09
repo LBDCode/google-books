@@ -13,14 +13,15 @@
 
 .custom-small-jumbo {
     clear: both;
-    text-align: center;
+    /* text-align: center;
     align-content:center;
-    justify-content:center;
-    /* padding: 15px 0; */
+    justify-content:center; */
+    padding: 35px;
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
-    background: url('./book3.jpg');
+    background: url('./book-row.png');
+    /* height: 200px; */
 }
 
 h1 {

@@ -39,6 +39,10 @@ class Saved extends Component {
     componentDidMount() {
       this.loadBooks();
     };
+
+    componentDidUpdate() {
+      console.log("updated");
+    };
   
     loadBooks = () => {
       API.getUserBooks(this.state.user)
