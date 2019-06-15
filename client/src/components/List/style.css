@@ -10,29 +10,9 @@
   color: #222c;
 }
 
-.list-overflow-container ul {
-  margin: 0;
+.src-img {
+  width: 128px;
+  height: 192px;
+  margin: 5px;
 }
 
-.list-overflow-container li {
-  padding: 10px;
-  border-radius: 0px;
-  border-left: none;
-  border-right: none;
-}
-
-.list-overflow-container li * {
-  cursor: pointer;
-}
-
-.list-overflow-container li a {
-  color: #2A878C;
-}
-
-.list-overflow-container li:first-child {
-  border-top: none;
-}
-
-.list-overflow-container li:last-child {
-  border-bottom: none;
-}

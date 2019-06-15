@@ -14,6 +14,36 @@
     margin-left: 10px;
 }
 
+.collapse-wrapper {
+    margin-bottom: 40px;
+}
+
+.collapse-header {
+    color: #495057;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.collapse-toggle {
+    font-size: 24px;
+    color: #ff0000ab;
+    margin: 10px;
+    font-weight: 600!important;
+}
+
+.collapse-toggle:hover {
+    color: rgba(34, 34, 34, 0.404);
+    cursor: pointer;
+}
+
+.collapse-body {
+    padding: 20px 30px;
+}
+
+.collapse-body>p {
+    margin-bottom: .3rem;
+}
+
 @media only screen and (max-width: 550px) {
     .filters {
         display: block;

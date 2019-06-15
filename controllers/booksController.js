@@ -22,6 +22,7 @@ module.exports = {
   },
   //working
   createUser: function(req, res) {
+    console.log(req.body);
     db.Schema.User.create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));

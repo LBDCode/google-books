@@ -4,11 +4,8 @@ import "./style.css";
 
 // This file exports the Input, TextArea, and FormBtn components
 
-
-
 export function Card(props) {
     var cls = 'fas fa-'+ props.icon;
-    // "<i className='fas fa-search'></i>"
   return (
     <div className="card home-card" >
         <div className="card-body" >

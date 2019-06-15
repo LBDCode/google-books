@@ -12,10 +12,12 @@ class Nav extends Component {
  
     this.state = {
       user: "",
+      useName: "",
       loginEmail: "",
       loginPassword: "",
       signupEmail: "",
-      signupPassword:""
+      signupPassword:"",
+      signupName: ""
     };
   };
 
@@ -27,11 +29,12 @@ class Nav extends Component {
     
   };
 
-  newUser = (email) => {
-    const newUser = {"email": email}
+  newUser = (email, userName) => {
+    const newUser = {"email": email, "userName": userName};
+    console.log(newUser);
     API.createUser(newUser)
       .then(res =>
-        this.setState({user: email})
+        this.setState({user: email, userName: userName})
       )
       .catch(err => console.log(err));  
   };
@@ -98,18 +101,25 @@ class Nav extends Component {
                       value={this.state.loginPassword}
                       onChange={this.handleInputChange}
                     />
-                    <FormBtn type="button" className="btn btn-primary" id="loginBtn" onClick={() => this.newUser(this.state.loginEmail)}>Login</FormBtn>
+                    <FormBtn type="button" className="btn btn-primary" id="loginBtn" onClick={() => this.newUser(this.state.loginEmail, this.state.signupName)}>Login</FormBtn>
                     <FormBtn type="button" className="btn btn-secondary" id="guestBtn" data-dismiss="modal">Continue as Guest</FormBtn>
                   </form>
                 </div>
                 <div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
                   <form>
-                    <LoginInput
-                        id="signupEmail"
-                        placeholder="Email"
-                        type="email"
-                        name="signupEmail"
-                        value={this.state.signupEmail}
+                      <LoginInput
+                          id="signupEmail"
+                          placeholder="Email"
+                          type="email"
+                          name="signupEmail"
+                          value={this.state.signupEmail}
+                          onChange={this.handleInputChange}
+                        /> 
+                        <LoginInput
+                        id="signupName"
+                        placeholder="User Name"
+                        name="signupName"
+                        value={this.state.signupName}
                         onChange={this.handleInputChange}
                       />
                       <LoginInput
@@ -120,7 +130,7 @@ class Nav extends Component {
                         value={this.state.signupPassword}
                         onChange={this.handleInputChange}
                       />
-                    <FormBtn type="button" className="btn btn-primary" id="signupBtn">Sign Up</FormBtn>
+                    <FormBtn type="button" className="btn btn-primary" id="loginBtn" onClick={() => this.newUser(this.state.signupEmail, this.state.signupName)}>Login</FormBtn>
                     <FormBtn type="button" className="btn btn-secondary" id="guestBtn" data-dismiss="modal">Continue as Guest</FormBtn>
                   </form>
                 </div>

@@ -1,0 +1,3402 @@
+(window["webpackJsonp"] = window["webpackJsonp"] || []).push([["main"],{
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Card/style.css":
+/*!******************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/Card/style.css ***!
+  \******************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".home-card {\r\n    background-color: #222;\r\n    color: #fff;\r\n    margin: 10px auto;\r\n    height: 235px;\r\n    max-width: 270px;\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/DeleteBtn/style.css":
+/*!***********************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/DeleteBtn/style.css ***!
+  \***********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".delete-btn {\n  float: right;\n  color: #e74944;\n}\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Form/style.css":
+/*!******************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/Form/style.css ***!
+  \******************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".form-group {\r\n    margin-bottom: 0!important;\r\n}\r\n\r\n.filters {\r\n    display: -webkit-inline-flex;\r\n    display: inline-flex;\r\n    background-color: rgba(34, 34, 34, 0.404); \r\n    color: #fff;\r\n    padding: 5px 10px;\r\n    margin: 10px 0;\r\n}\r\n\r\n.form-check {\r\n    margin-left: 10px;\r\n}\r\n\r\n.collapse-wrapper {\r\n    margin-bottom: 40px;\r\n}\r\n\r\n.collapse-header {\r\n    color: #495057;\r\n    margin-top: 20px;\r\n    text-align: center;\r\n}\r\n\r\n.collapse-toggle {\r\n    font-size: 24px;\r\n    color: #ff0000ab;\r\n    margin: 10px;\r\n    font-weight: 600!important;\r\n}\r\n\r\n.collapse-toggle:hover {\r\n    color: rgba(34, 34, 34, 0.404);\r\n    cursor: pointer;\r\n}\r\n\r\n.collapse-body {\r\n    padding: 20px 30px;\r\n}\r\n\r\n.collapse-body>p {\r\n    margin-bottom: .3rem;\r\n}\r\n\r\n@media only screen and (max-width: 550px) {\r\n    .filters {\r\n        display: block;\r\n        background-color: rgba(34, 34, 34, 0.404); \r\n        color: #fff;\r\n        padding: 5px 10px;\r\n        margin: 10px 0;\r\n    }\r\n}\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Jumbotron/style.css":
+/*!***********************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/Jumbotron/style.css ***!
+  \***********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var escape = __webpack_require__(/*! ../../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".custom-jumbo {\r\n    clear: both;\r\n    text-align: center;\r\n    -webkit-align-content:center;\r\n            align-content:center;\r\n    -webkit-justify-content:center;\r\n            justify-content:center;\r\n    background-repeat: no-repeat;\r\n    background-size: contain;\r\n    background-position: center;\r\n    background: url(" + escape(__webpack_require__(/*! ./book3.jpg */ "./src/components/Jumbotron/book3.jpg")) + ");\r\n    height:400px;\r\n    margin-bottom: 0!important;\r\n    border-radius: 0;\r\n}\r\n\r\n.custom-small-jumbo {\r\n    clear: both;\r\n    padding: 35px;\r\n    background-repeat: no-repeat;\r\n    background-size: contain;\r\n    background-position: center;\r\n    background: url(" + escape(__webpack_require__(/*! ./book-row.png */ "./src/components/Jumbotron/book-row.png")) + ");\r\n    border-radius: 0;\r\n}\r\n\r\nh1 {\r\n    margin-top: 50px;\r\n    margin-bottom: 20px;\r\n    font-size: 80px!important;\r\n    font-family: 'Dancing Script', cursive;\r\n}\r\n\r\nh2 {\r\n    margin-top: 20px;\r\n    margin-bottom: 10px;\r\n    font-family: 'Dancing Script', cursive;\r\n    font-size: 60px!important;\r\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/List/style.css":
+/*!******************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/List/style.css ***!
+  \******************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".btn-custom {\n  background-color: #222c;\n  margin: 2px;\n  color: #fff;\n}\n\n.btn-delete {\n  background-color: rgba(77, 72, 72, 0.342);\n  margin: 2px;\n  color: #222c;\n}\n\n.src-img {\n  width: 128px;\n  height: 192px;\n  margin: 5px;\n}\n\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Nav/style.css":
+/*!*****************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/Nav/style.css ***!
+  \*****************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".cust-link {\n  color: #aaa!important;\n  padding: 10px;\n}\n\n.cust-nav {\n  background-color: #222!important;\n}\n\n.cust-text {\n  color: #fff!important;\n  font-family: 'Dancing Script', cursive;\n  text-transform: none;\n  font-size: 30px;\n  font-weight: 500;\n}", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/NavElems/style.css":
+/*!**********************************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/components/NavElems/style.css ***!
+  \**********************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "\r\n  \r\n\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/pages/style.css":
+/*!********************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/pages/style.css ***!
+  \********************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+var escape = __webpack_require__(/*! ../../node_modules/css-loader/lib/url/escape.js */ "./node_modules/css-loader/lib/url/escape.js");
+exports = module.exports = __webpack_require__(/*! ../../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".title {\r\n    white-space: normal !important;\r\n    line-height: 1.5!important;\r\n    font-size: 14px!important;\r\n}\r\n\r\n.home-buttons {\r\n    margin-top: 20px;\r\n    margin-bottom: 20px;\r\n}\r\n\r\n.author {\r\n    white-space: normal !important;\r\n    line-height: 1.5!important;\r\n    font-size: 14px!important; \r\n}\r\n\r\n.btn-home {\r\n    background-color: #22b24c;\r\n    margin: 2px;\r\n    padding: 10px 20px;\r\n    color: #fff;\r\n}\r\n\r\n.btn-custom {\r\n    background-color: #222c;\r\n    margin: 2px;\r\n    color: #fff;\r\n}\r\n  \r\n.btn-delete {\r\n    background-color: rgba(77, 72, 72, 0.342);\r\n    margin: 2px;\r\n    color: #222c;\r\n}\r\n\r\n.no-match {\r\n    clear: both;\r\n    text-align: center;\r\n    -webkit-align-content:center;\r\n            align-content:center;\r\n    -webkit-justify-content:center;\r\n            justify-content:center;\r\n    background-repeat: no-repeat;\r\n    background-size: contain;\r\n    background-position: center;\r\n    background: url(" + escape(__webpack_require__(/*! ./404.png */ "./src/pages/404.png")) + ");\r\n    height:100vh;\r\n    padding-top: 200px;\r\n}\r\n\r\n.results-message {\r\n    color: darkgray;\r\n    text-align: center;\r\n}\r\n\r\n.actions {\r\n    white-space: normal !important;\r\n    line-height: .8!important;\r\n}\r\n\r\n.edit {\r\n    color: blue;\r\n}\r\n\r\n.delete {\r\n    color: red;\r\n}\r\n\r\n.delete :hover {\r\n    text-decoration:underline; \r\n}\r\n\r\n.actions P {\r\n    margin-bottom: 10px!important;\r\n}\r\n\r\n.ag-header-cell-label {\r\n    -webkit-justify-content: center;\r\n            justify-content: center;\r\n}\r\n\r\n.ag-row .ag-cell {\r\n    display: -webkit-flex;\r\n    display: flex;\r\n    -webkit-justify-content: center;\r\n            justify-content: center;\r\n    -webkit-align-items: center;\r\n            align-items: center;\r\n}\r\n\r\n.home-message {\r\n    margin: 30px auto;\r\n    -webkit-justify-content: center;\r\n            justify-content: center;\r\n    max-width: 900px;\r\n    /* background-color: #fff; */\r\n    font-size: 14px;\r\n}\r\n\r\n.home-about {\r\n    margin: 30px;\r\n}\r\n\r\n.message {\r\n    height: 200px;\r\n    padding: 20px 10px;\r\n}\r\n\r\n.main-message {\r\n    background-color: #4950571f;\r\n}\r\n\r\n.book-details {\r\n    margin-top: 20px;\r\n    margin-left: 50px;\r\n    max-width: 800px;\r\n}\r\n\r\n.book-title {\r\n    margin-top: 40px;\r\n    margin-bottom: 12px;\r\n}\r\n\r\n@media only screen and (max-width: 450px) {\r\n    .book-details {\r\n        margin-top: 30px;\r\n        margin-left: 5px;\r\n        max-width: 800px;\r\n    }\r\n    \r\n    .book-title {\r\n        margin-top: 20px;\r\n        margin-bottom: 12px;\r\n        font-size: 24px;\r\n    }\r\n}\r\n\r\n\r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/style.css":
+/*!**************************************************************************************************************!*\
+  !*** ./node_modules/css-loader??ref--6-oneOf-3-1!./node_modules/postcss-loader/src??postcss!./src/style.css ***!
+  \**************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/lib/css-base.js */ "./node_modules/css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, ".results-message {\r\n    color: darkgray;\r\n}\r\n\r\nbody {\r\n    margin: 0;\r\n    padding: 0;\r\n    font-family: sans-serif;\r\n  }\r\n  \r\n", ""]);
+
+// exports
+
+
+/***/ }),
+
+/***/ "./src/App.js":
+/*!********************!*\
+  !*** ./src/App.js ***!
+  \********************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _pages_Home__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./pages/Home */ "./src/pages/Home.js");
+/* harmony import */ var _pages_Search__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./pages/Search */ "./src/pages/Search.js");
+/* harmony import */ var _pages_Saved__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./pages/Saved */ "./src/pages/Saved.js");
+/* harmony import */ var _pages_Detail__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./pages/Detail */ "./src/pages/Detail.js");
+/* harmony import */ var _pages_NoMatch__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./pages/NoMatch */ "./src/pages/NoMatch.js");
+/* harmony import */ var _components_Nav__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./components/Nav */ "./src/components/Nav/index.js");
+var _jsxFileName = "C:\\Users\\lilbntm\\GoogleBooks\\client\\src\\App.js";
+
+
+
+
+
+
+
+
+
+function App() {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["BrowserRouter"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 13
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Switch"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/",
+    render: function render(props) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 16
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 17
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pages_Home__WEBPACK_IMPORTED_MODULE_2__["default"], Object.assign({}, props, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 18
+        },
+        __self: this
+      })));
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/search",
+    render: function render(props) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pages_Search__WEBPACK_IMPORTED_MODULE_3__["default"], Object.assign({}, props, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
+        },
+        __self: this
+      })));
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 21
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/saved",
+    render: function render(props) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 28
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pages_Saved__WEBPACK_IMPORTED_MODULE_4__["default"], Object.assign({}, props, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        },
+        __self: this
+      })));
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 27
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    exact: true,
+    path: "/books/:id",
+    render: function render(props) {
+      return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 34
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_components_Nav__WEBPACK_IMPORTED_MODULE_7__["default"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 35
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_pages_Detail__WEBPACK_IMPORTED_MODULE_5__["default"], Object.assign({}, props, {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 36
+        },
+        __self: this
+      })));
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
+    },
+    __self: this
+  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_1__["Route"], {
+    component: _pages_NoMatch__WEBPACK_IMPORTED_MODULE_6__["default"],
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
+    },
+    __self: this
+  }))));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (App);
+
+/***/ }),
+
+/***/ "./src/components/Card/index.js":
+/*!**************************************!*\
+  !*** ./src/components/Card/index.js ***!
+  \**************************************/
+/*! exports provided: Card */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Card", function() { return Card; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ "./src/components/Card/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\lilbntm\\GoogleBooks\\client\\src\\components\\Card\\index.js";
+
+ // This file exports the Input, TextArea, and FormBtn components
+
+function Card(props) {
+  var cls = 'fas fa-' + props.icon;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card home-card",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card-body",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "card-title",
+    style: {
+      textAlign: "center"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, props.title), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("p", {
+    className: "card-text",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, props.text), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h2", {
+    style: {
+      textAlign: "center"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: cls,
+    style: {
+      textAlign: "center",
+      fontSize: '46px'
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }))));
+}
+;
+
+/***/ }),
+
+/***/ "./src/components/Card/style.css":
+/*!***************************************!*\
+  !*** ./src/components/Card/style.css ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Card/style.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Card/style.css", function() {
+		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Card/style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/DeleteBtn/index.js":
+/*!*******************************************!*\
+  !*** ./src/components/DeleteBtn/index.js ***!
+  \*******************************************/
+/*! exports provided: DeleteBtn */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DeleteBtn", function() { return DeleteBtn; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ "./src/components/DeleteBtn/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\lilbntm\\GoogleBooks\\client\\src\\components\\DeleteBtn\\index.js";
+
+
+function DeleteBtn(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", Object.assign({
+    className: "delete-btn"
+  }, props, {
+    role: "button",
+    tabIndex: "0",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }), "Delete");
+}
+
+/***/ }),
+
+/***/ "./src/components/DeleteBtn/style.css":
+/*!********************************************!*\
+  !*** ./src/components/DeleteBtn/style.css ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/DeleteBtn/style.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/DeleteBtn/style.css", function() {
+		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/DeleteBtn/style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/Form/index.js":
+/*!**************************************!*\
+  !*** ./src/components/Form/index.js ***!
+  \**************************************/
+/*! exports provided: Input, LoginInput, FormBtn, CheckboxDiv, CheckBox, Collapse */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Input", function() { return Input; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "LoginInput", function() { return LoginInput; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormBtn", function() { return FormBtn; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CheckboxDiv", function() { return CheckboxDiv; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CheckBox", function() { return CheckBox; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Collapse", function() { return Collapse; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ "./src/components/Form/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\lilbntm\\GoogleBooks\\client\\src\\components\\Form\\index.js";
+
+ // This file exports the Input, TextArea, and FormBtn components
+
+function Input(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group",
+    style: {
+      justifyContent: "center",
+      maxWidth: "700px",
+      margin: "10px 0"
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", Object.assign({
+    className: "form-control"
+  }, props, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  })));
+}
+;
+function LoginInput(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-group",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    for: props.id,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, props.placeholder), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", Object.assign({}, props, {
+    className: "form-control",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  })));
+}
+;
+function FormBtn(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", Object.assign({}, props, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 26
+    },
+    __self: this
+  }), props.children);
+}
+;
+function CheckboxDiv(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "filters",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }, props.children);
+}
+function CheckBox(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "form-check",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("input", Object.assign({
+    className: "form-check-input",
+    type: "radio"
+  }, props, {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 46
+    },
+    __self: this
+  })), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("label", {
+    className: "form-check-label",
+    for: props.id,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 47
+    },
+    __self: this
+  }, props.text));
+}
+function Collapse(props) {
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "collapse-wrapper",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 54
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h4", {
+    className: "collapse-header",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 55
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("span", {
+    className: "collapse-toggle",
+    "data-toggle": "collapse",
+    href: "#search-collapse",
+    role: "button",
+    "aria-expanded": "false",
+    "aria-controls": "search-collapse",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 56
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("i", {
+    className: "fas fa-plus",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    },
+    __self: this
+  })), props.header), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "collapse",
+    id: "search-collapse",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "card card-body collapse-body",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 62
+    },
+    __self: this
+  }, props.children)));
+}
+
+/***/ }),
+
+/***/ "./src/components/Form/style.css":
+/*!***************************************!*\
+  !*** ./src/components/Form/style.css ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Form/style.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Form/style.css", function() {
+		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Form/style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/Grid/index.js":
+/*!**************************************!*\
+  !*** ./src/components/Grid/index.js ***!
+  \**************************************/
+/*! exports provided: Container, Row, Col */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Container", function() { return Container; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Row", function() { return Row; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Col", function() { return Col; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\lilbntm\\GoogleBooks\\client\\src\\components\\Grid\\index.js";
+
+function Container(_ref) {
+  var fluid = _ref.fluid,
+      children = _ref.children;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "container".concat(fluid ? "-fluid" : ""),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 4
+    },
+    __self: this
+  }, children);
+}
+function Row(_ref2) {
+  var fluid = _ref2.fluid,
+      children = _ref2.children;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "row".concat(fluid ? "-fluid" : ""),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, children);
+}
+function Col(_ref3) {
+  var size = _ref3.size,
+      order = _ref3.order,
+      children = _ref3.children;
+  var cls = size.split(" ").map(function (size) {
+    return "col-" + size;
+  }).join(" ");
+
+  if (order) {
+    cls += " " + order;
+  }
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: cls,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, children);
+}
+
+/***/ }),
+
+/***/ "./src/components/Jumbotron/book-row.png":
+/*!***********************************************!*\
+  !*** ./src/components/Jumbotron/book-row.png ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/book-row.71723eaf.png";
+
+/***/ }),
+
+/***/ "./src/components/Jumbotron/book3.jpg":
+/*!********************************************!*\
+  !*** ./src/components/Jumbotron/book3.jpg ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/book3.4ee19e83.jpg";
+
+/***/ }),
+
+/***/ "./src/components/Jumbotron/index.js":
+/*!*******************************************!*\
+  !*** ./src/components/Jumbotron/index.js ***!
+  \*******************************************/
+/*! exports provided: Jumbotron, SmallJumbotron */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Jumbotron", function() { return Jumbotron; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SmallJumbotron", function() { return SmallJumbotron; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ "./src/components/Jumbotron/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\lilbntm\\GoogleBooks\\client\\src\\components\\Jumbotron\\index.js";
+
+
+function Jumbotron(_ref) {
+  var children = _ref.children;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "jumbotron custom-jumbo",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, children);
+}
+;
+function SmallJumbotron(_ref2) {
+  var children = _ref2.children;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "jumbotron custom-small-jumbo",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, children);
+}
+;
+
+/***/ }),
+
+/***/ "./src/components/Jumbotron/style.css":
+/*!********************************************!*\
+  !*** ./src/components/Jumbotron/style.css ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Jumbotron/style.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Jumbotron/style.css", function() {
+		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Jumbotron/style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/List/index.js":
+/*!**************************************!*\
+  !*** ./src/components/List/index.js ***!
+  \**************************************/
+/*! exports provided: List, ListItem, CardItem */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "List", function() { return List; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListItem", function() { return ListItem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CardItem", function() { return CardItem; });
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/classCallCheck */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createClass */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/getPrototypeOf */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/assertThisInitialized */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/assertThisInitialized.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_star_rating_component__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-star-rating-component */ "./node_modules/react-star-rating-component/index.js");
+/* harmony import */ var react_star_rating_component__WEBPACK_IMPORTED_MODULE_7___default = /*#__PURE__*/__webpack_require__.n(react_star_rating_component__WEBPACK_IMPORTED_MODULE_7__);
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./style.css */ "./src/components/List/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_8__);
+
+
+
+
+
+
+var _jsxFileName = "C:\\Users\\lilbntm\\GoogleBooks\\client\\src\\components\\List\\index.js";
+
+
+
+function List(_ref) {
+  var children = _ref.children;
+  return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+    className: "list-overflow-container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("ul", {
+    className: "list-group list unstyled",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, children));
+}
+function ListItem(_ref2) {
+  var children = _ref2.children;
+  return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
+    className: "list-group-item",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 14
+    },
+    __self: this
+  }, children);
+}
+var CardItem =
+/*#__PURE__*/
+function (_Component) {
+  Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(CardItem, _Component);
+
+  function CardItem(props) {
+    var _this;
+
+    Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, CardItem);
+
+    _this = Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(CardItem).call(this, props));
+    _this.onStarClick = _this.onStarClick.bind(Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_assertThisInitialized__WEBPACK_IMPORTED_MODULE_5__["default"])(_this)));
+    _this.state = {
+      book: props,
+      rating: props.stars
+    };
+    return _this;
+  }
+
+  Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(CardItem, [{
+    key: "onStarClick",
+    value: function onStarClick(nextValue, prevValue, name) {
+      console.log(this.state.book.stars);
+      this.setState({
+        rating: nextValue
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      var rating = this.state.rating;
+      var props = this.props;
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("li", {
+        className: "media",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
+        src: props.image,
+        className: "mr-3 src-img",
+        alt: "...",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "media-body",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h5", {
+        className: "mt-0 mb-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 44
+        },
+        __self: this
+      }, !props.title ? "" : props.title), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h6", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 45
+        },
+        __self: this
+      }, !props.author ? "Author unknown" : props.author.map(function (auth) {
+        return auth + " ";
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        href: props.link,
+        target: "blank",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        className: "btn btn-custom btn-sm",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46
+        },
+        __self: this
+      }, "Preview")), props.saved === "not saved" ? react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        className: "btn btn-custom btn-sm",
+        onClick: function onClick() {
+          return props.saveBook(props, _this2.state.rating);
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 48
+        },
+        __self: this
+      }, "Save") : react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        className: "btn btn-delete btn-sm",
+        onClick: function onClick() {
+          return props.deleteBook(props);
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 50
+        },
+        __self: this
+      }, "Delete"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_star_rating_component__WEBPACK_IMPORTED_MODULE_7___default.a, {
+        name: props.title,
+        starCount: 5,
+        value: rating,
+        onStarClick: this.onStarClick,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 60
+        },
+        __self: this
+      }, !props.description ? "" : props.description)));
+    }
+  }]);
+
+  return CardItem;
+}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
+
+/***/ }),
+
+/***/ "./src/components/List/style.css":
+/*!***************************************!*\
+  !*** ./src/components/List/style.css ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/List/style.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/List/style.css", function() {
+		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/List/style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/Login/index.js":
+/*!***************************************!*\
+  !*** ./src/components/Login/index.js ***!
+  \***************************************/
+/*! exports provided: Modal, ModalTabList */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Modal", function() { return Modal; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ModalTabList", function() { return ModalTabList; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+var _jsxFileName = "C:\\Users\\lilbntm\\GoogleBooks\\client\\src\\components\\Login\\index.js";
+
+function Modal(_ref) {
+  var children = _ref.children;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "modal fade",
+    id: "loginModal",
+    tabindex: "-1",
+    role: "dialog",
+    "aria-labelledby": "loginModalTitle",
+    "aria-hidden": "true",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "modal-dialog modal-dialog-centered",
+    role: "document",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "modal-content",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 8
+    },
+    __self: this
+  }, children)));
+}
+;
+function ModalTabList(_ref2) {
+  var children = _ref2.children;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "nav nav-tabs",
+    id: "myTab",
+    role: "tablist",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, children);
+}
+
+/***/ }),
+
+/***/ "./src/components/Nav/index.js":
+/*!*************************************!*\
+  !*** ./src/components/Nav/index.js ***!
+  \*************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/defineProperty */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/classCallCheck */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createClass */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/getPrototypeOf */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _utils_API__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../../utils/API */ "./src/utils/API.js");
+/* harmony import */ var _NavElems__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../NavElems */ "./src/components/NavElems/index.js");
+/* harmony import */ var _Login__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../Login */ "./src/components/Login/index.js");
+/* harmony import */ var _Form__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../Form */ "./src/components/Form/index.js");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./style.css */ "./src/components/Nav/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_11__);
+
+
+
+
+
+
+var _jsxFileName = "C:\\Users\\lilbntm\\GoogleBooks\\client\\src\\components\\Nav\\index.js";
+
+
+
+
+
+
+
+var Nav =
+/*#__PURE__*/
+function (_Component) {
+  Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Nav, _Component);
+
+  function Nav(props) {
+    var _this;
+
+    Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Nav);
+
+    _this = Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Nav).call(this, props));
+
+    _this.handleInputChange = function (event) {
+      var _event$target = event.target,
+          name = _event$target.name,
+          value = _event$target.value;
+
+      _this.setState(Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({}, name, value));
+    };
+
+    _this.newUser = function (email) {
+      var newUser = {
+        "email": email
+      };
+      _utils_API__WEBPACK_IMPORTED_MODULE_7__["default"].createUser(newUser).then(function (res) {
+        return _this.setState({
+          user: email
+        });
+      }).catch(function (err) {
+        return console.log(err);
+      });
+    };
+
+    _this.state = {
+      user: "",
+      loginEmail: "",
+      loginPassword: "",
+      signupEmail: "",
+      signupPassword: ""
+    };
+    return _this;
+  }
+
+  Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Nav, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_NavElems__WEBPACK_IMPORTED_MODULE_8__["Navbar"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 41
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        className: "navbar-toggler",
+        type: "button",
+        "data-toggle": "collapse",
+        "data-target": ".dual-nav",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 42
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+        className: "navbar-toggler-icon",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 43
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "navbar-collapse collapse dual-nav  order-1 order-md-0",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        href: "/",
+        className: "navbar-brand cust-text d-block order-0 order-md-1 ",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 47
+        },
+        __self: this
+      }, "Bibliofile")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_NavElems__WEBPACK_IMPORTED_MODULE_8__["NavListRight"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 51
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_NavElems__WEBPACK_IMPORTED_MODULE_8__["NavListItem"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 52
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        className: "nav-link cust-link",
+        href: "/search",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 53
+        },
+        __self: this
+      }, "search")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_NavElems__WEBPACK_IMPORTED_MODULE_8__["NavListItem"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        className: "nav-link cust-link",
+        href: "/saved",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56
+        },
+        __self: this
+      }, "library")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_NavElems__WEBPACK_IMPORTED_MODULE_8__["NavListItem"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 58
+        },
+        __self: this
+      }, this.state.user === "" ? react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        className: "nav-link cust-link",
+        href: "#",
+        "data-toggle": "modal",
+        "data-target": "#loginModal",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 60
+        },
+        __self: this
+      }, "sign in") : react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        className: "nav-link cust-link",
+        href: "#",
+        "data-toggle": "modal",
+        "data-target": "#loginModal",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        },
+        __self: this
+      }, "sign out"))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Login__WEBPACK_IMPORTED_MODULE_9__["Modal"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "modal-header",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 68
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Login__WEBPACK_IMPORTED_MODULE_9__["ModalTabList"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 69
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_NavElems__WEBPACK_IMPORTED_MODULE_8__["NavListItem"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        className: "nav-link active",
+        id: "home-tab",
+        "data-toggle": "tab",
+        href: "#home",
+        role: "tab",
+        "aria-controls": "home",
+        "aria-selected": "true",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 71
+        },
+        __self: this
+      }, "Login")), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_NavElems__WEBPACK_IMPORTED_MODULE_8__["NavListItem"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 73
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("a", {
+        className: "nav-link",
+        id: "profile-tab",
+        "data-toggle": "tab",
+        href: "#profile",
+        role: "tab",
+        "aria-controls": "profile",
+        "aria-selected": "false",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 74
+        },
+        __self: this
+      }, "Signup"))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        type: "button",
+        className: "close",
+        "data-dismiss": "modal",
+        "aria-label": "Close",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 77
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+        "aria-hidden": "true",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 78
+        },
+        __self: this
+      }, "\xD7"))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "modal-body",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 81
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "tab-content",
+        id: "myTabContent",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 82
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "tab-pane fade show active",
+        id: "home",
+        role: "tabpanel",
+        "aria-labelledby": "home-tab",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 83
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 84
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Form__WEBPACK_IMPORTED_MODULE_10__["LoginInput"], {
+        id: "loginEmail",
+        placeholder: "Email",
+        type: "email",
+        name: "loginEmail",
+        value: this.state.loginEmail,
+        onChange: this.handleInputChange,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 85
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Form__WEBPACK_IMPORTED_MODULE_10__["LoginInput"], {
+        id: "loginPassword",
+        placeholder: "Password",
+        type: "password",
+        name: "loginPassword",
+        value: this.state.loginPassword,
+        onChange: this.handleInputChange,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 93
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Form__WEBPACK_IMPORTED_MODULE_10__["FormBtn"], {
+        type: "button",
+        className: "btn btn-primary",
+        id: "loginBtn",
+        onClick: function onClick() {
+          return _this2.newUser(_this2.state.loginEmail);
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 101
+        },
+        __self: this
+      }, "Login"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Form__WEBPACK_IMPORTED_MODULE_10__["FormBtn"], {
+        type: "button",
+        className: "btn btn-secondary",
+        id: "guestBtn",
+        "data-dismiss": "modal",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 102
+        },
+        __self: this
+      }, "Continue as Guest"))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "tab-pane fade",
+        id: "profile",
+        role: "tabpanel",
+        "aria-labelledby": "profile-tab",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 105
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 106
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Form__WEBPACK_IMPORTED_MODULE_10__["LoginInput"], {
+        id: "signupEmail",
+        placeholder: "Email",
+        type: "email",
+        name: "signupEmail",
+        value: this.state.signupEmail,
+        onChange: this.handleInputChange,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 107
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Form__WEBPACK_IMPORTED_MODULE_10__["LoginInput"], {
+        id: "signupPassword",
+        placeholder: "Password",
+        type: "password",
+        name: "signupPassword",
+        value: this.state.signupPassword,
+        onChange: this.handleInputChange,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 115
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Form__WEBPACK_IMPORTED_MODULE_10__["FormBtn"], {
+        type: "button",
+        className: "btn btn-primary",
+        id: "signupBtn",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 123
+        },
+        __self: this
+      }, "Sign Up"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_Form__WEBPACK_IMPORTED_MODULE_10__["FormBtn"], {
+        type: "button",
+        className: "btn btn-secondary",
+        id: "guestBtn",
+        "data-dismiss": "modal",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 124
+        },
+        __self: this
+      }, "Continue as Guest")))))));
+    }
+  }]);
+
+  return Nav;
+}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
+
+;
+/* harmony default export */ __webpack_exports__["default"] = (Nav);
+
+/***/ }),
+
+/***/ "./src/components/Nav/style.css":
+/*!**************************************!*\
+  !*** ./src/components/Nav/style.css ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Nav/style.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Nav/style.css", function() {
+		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/Nav/style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/components/NavElems/index.js":
+/*!******************************************!*\
+  !*** ./src/components/NavElems/index.js ***!
+  \******************************************/
+/*! exports provided: Navbar, NavListRight, NavListItem, List, ListItem */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Navbar", function() { return Navbar; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavListRight", function() { return NavListRight; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "NavListItem", function() { return NavListItem; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "List", function() { return List; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ListItem", function() { return ListItem; });
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./style.css */ "./src/components/NavElems/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_1__);
+var _jsxFileName = "C:\\Users\\lilbntm\\GoogleBooks\\client\\src\\components\\NavElems\\index.js";
+
+
+function Navbar(_ref) {
+  var children = _ref.children;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("nav", {
+    className: "navbar navbar-dark navbar-expand-md cust-nav justify-content-between",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, children);
+}
+function NavListRight(_ref2) {
+  var children = _ref2.children;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "navbar-collapse collapse dual-nav w-50 order-2",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 15
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "nav navbar-nav ml-auto",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 16
+    },
+    __self: this
+  }, " ", children));
+}
+function NavListItem(_ref3) {
+  var children = _ref3.children;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "nav-item",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, children);
+}
+function List(_ref4) {
+  var children = _ref4.children;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "list-overflow-container",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 31
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("ul", {
+    className: "list-group list unstyled",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }, children));
+}
+function ListItem(_ref5) {
+  var children = _ref5.children;
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("li", {
+    className: "list-group-item",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
+  }, children);
+}
+
+/***/ }),
+
+/***/ "./src/components/NavElems/style.css":
+/*!*******************************************!*\
+  !*** ./src/components/NavElems/style.css ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/NavElems/style.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/NavElems/style.css", function() {
+		var newContent = __webpack_require__(/*! !../../../node_modules/css-loader??ref--6-oneOf-3-1!../../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/components/NavElems/style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/index.js":
+/*!**********************!*\
+  !*** ./src/index.js ***!
+  \**********************/
+/*! no exports provided */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
+/* harmony import */ var _App__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./App */ "./src/App.js");
+var _jsxFileName = "C:\\Users\\lilbntm\\GoogleBooks\\client\\src\\index.js";
+
+
+
+react_dom__WEBPACK_IMPORTED_MODULE_1___default.a.render(react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_App__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 5
+  },
+  __self: undefined
+}), document.getElementById("root"));
+
+/***/ }),
+
+/***/ "./src/pages/404.png":
+/*!***************************!*\
+  !*** ./src/pages/404.png ***!
+  \***************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+module.exports = __webpack_require__.p + "static/media/404.7901b3e7.png";
+
+/***/ }),
+
+/***/ "./src/pages/Detail.js":
+/*!*****************************!*\
+  !*** ./src/pages/Detail.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/objectSpread.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/classCallCheck */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createClass */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/getPrototypeOf */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var react_router__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-router */ "./node_modules/react-router/esm/react-router.js");
+/* harmony import */ var _components_Grid__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Grid */ "./src/components/Grid/index.js");
+/* harmony import */ var react_star_rating_component__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! react-star-rating-component */ "./node_modules/react-star-rating-component/index.js");
+/* harmony import */ var react_star_rating_component__WEBPACK_IMPORTED_MODULE_10___default = /*#__PURE__*/__webpack_require__.n(react_star_rating_component__WEBPACK_IMPORTED_MODULE_10__);
+/* harmony import */ var _utils_API__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../utils/API */ "./src/utils/API.js");
+
+
+
+
+
+
+var _jsxFileName = "C:\\Users\\lilbntm\\GoogleBooks\\client\\src\\pages\\Detail.js";
+
+
+
+
+
+
+
+var Detail =
+/*#__PURE__*/
+function (_Component) {
+  Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Detail, _Component);
+
+  function Detail() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Detail);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, (_getPrototypeOf2 = Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Detail)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this.state = {
+      user: "libby2@libby.com",
+      book: {}
+    };
+
+    _this.saveBook = function (p, s) {
+      console.log(p, s);
+      _utils_API__WEBPACK_IMPORTED_MODULE_11__["default"].saveUserBook(_this.state.user, p.googleID, {
+        googleID: p.googleID,
+        imageURL: p.image,
+        title: p.title,
+        author: p.author,
+        description: p.description,
+        rating: s
+      }).then(function (res) {
+        return _this.loadBooks();
+      }).catch(function (err) {
+        return console.log(err);
+      });
+    };
+
+    _this.deleteBook = function (p) {
+      _utils_API__WEBPACK_IMPORTED_MODULE_11__["default"].deleteBook(_this.state.user, p.googleID).then(function (res) {
+        return _this.redirectAfterDelete();
+      }).catch(function (err) {
+        return console.log(err);
+      });
+    };
+
+    return _this;
+  }
+
+  Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Detail, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.loadBook();
+    }
+  }, {
+    key: "loadBook",
+    value: function loadBook() {
+      var _this2 = this;
+
+      _utils_API__WEBPACK_IMPORTED_MODULE_11__["default"].getBook(this.state.user, this.props.match.params.id).then(function (res) {
+        return _this2.setState({
+          book: res.data[0]
+        });
+      }).catch(function (err) {
+        return console.log(err);
+      });
+    }
+  }, {
+    key: "redirectAfterDelete",
+    value: function redirectAfterDelete() {
+      this.props.history.push('/saved');
+    }
+  }, {
+    key: "onStarClick",
+    value: function onStarClick(nextValue, prevValue, name) {
+      var book = Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_objectSpread__WEBPACK_IMPORTED_MODULE_0__["default"])({}, this.state.book);
+
+      book.rating = nextValue;
+      console.log(book);
+      this.setState({
+        book: book
+      });
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this3 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Grid__WEBPACK_IMPORTED_MODULE_9__["Container"], {
+        fluid: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "book-details",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 60
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Grid__WEBPACK_IMPORTED_MODULE_9__["Row"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 61
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Grid__WEBPACK_IMPORTED_MODULE_9__["Col"], {
+        size: "md-8 6",
+        order: "order-2 order-sm-1",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 62
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        style: {
+          marginLeft: '10px'
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 63
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h3", {
+        className: "book-title",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 64
+        },
+        __self: this
+      }, this.state.book.title), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h5", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 67
+        },
+        __self: this
+      }, this.state.book.author), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_star_rating_component__WEBPACK_IMPORTED_MODULE_10___default.a, {
+        name: this.state.book.title,
+        starCount: 5,
+        value: this.state.book.rating,
+        onStarClick: this.onStarClick.bind(this),
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 70
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        style: {
+          marginTop: '10px;'
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 76
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 77
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        className: "btn btn-custom btn-sm",
+        onClick: function onClick() {
+          return _this3.saveBook(_this3.state.book, _this3.state.rating);
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 78
+        },
+        __self: this
+      }, "Save"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("button", {
+        className: "btn btn-delete btn-sm",
+        onClick: function onClick() {
+          return _this3.deleteBook(_this3.state.book);
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 79
+        },
+        __self: this
+      }, "Delete"))))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Grid__WEBPACK_IMPORTED_MODULE_9__["Col"], {
+        size: "md-4 6",
+        order: "order-1 order-sm-2",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 84
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("img", {
+        style: {
+          marginTop: '20px',
+          marginLeft: '10px',
+          width: '110px',
+          height: '155px'
+        },
+        src: this.state.book.imageURL,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 85
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        style: {
+          marginTop: '20px'
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 86
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react_router_dom__WEBPACK_IMPORTED_MODULE_7__["Link"], {
+        to: "/saved",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 87
+        },
+        __self: this
+      }, "Back to saved books")))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Grid__WEBPACK_IMPORTED_MODULE_9__["Row"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 93
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Grid__WEBPACK_IMPORTED_MODULE_9__["Col"], {
+        size: "md-12",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 94
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        style: {
+          marginTop: '20px',
+          textIndent: '30px!important'
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 95
+        },
+        __self: this
+      }, this.state.book.description)))));
+    }
+  }]);
+
+  return Detail;
+}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Detail);
+
+/***/ }),
+
+/***/ "./src/pages/Home.js":
+/*!***************************!*\
+  !*** ./src/pages/Home.js ***!
+  \***************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/classCallCheck */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createClass */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/getPrototypeOf */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_Jumbotron__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/Jumbotron */ "./src/components/Jumbotron/index.js");
+/* harmony import */ var _components_Card__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../components/Card */ "./src/components/Card/index.js");
+/* harmony import */ var _components_Grid__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Grid */ "./src/components/Grid/index.js");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../style.css */ "./src/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_9__);
+
+
+
+
+
+var _jsxFileName = "C:\\Users\\lilbntm\\GoogleBooks\\client\\src\\pages\\Home.js";
+
+
+
+
+
+
+var Home =
+/*#__PURE__*/
+function (_Component) {
+  Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Home, _Component);
+
+  function Home() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Home);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, (_getPrototypeOf2 = Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Home)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this.state = {
+      books: [],
+      results: [],
+      search: "",
+      user: "libby2@libby.com"
+    };
+    return _this;
+  }
+
+  Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Home, [{
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_5___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Jumbotron__WEBPACK_IMPORTED_MODULE_6__["Jumbotron"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 20
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h1", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 21
+        },
+        __self: this
+      }, "Bibliofile"), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("h4", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 22
+        },
+        __self: this
+      }, "Keep your reading list organized and up to date."), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "home-buttons",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 23
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("span", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 24
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("button", {
+        className: "btn btn-home",
+        onClick: function onClick() {
+          return _this2.props.history.push('/search');
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 25
+        },
+        __self: this
+      }, "Get Started")))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Grid__WEBPACK_IMPORTED_MODULE_8__["Container"], {
+        fluid: true,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 29
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "home-message",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 30
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Grid__WEBPACK_IMPORTED_MODULE_8__["Row"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 31
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Grid__WEBPACK_IMPORTED_MODULE_8__["Col"], {
+        size: "md-4",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 32
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Card__WEBPACK_IMPORTED_MODULE_7__["Card"], {
+        title: "Explore",
+        icon: "search",
+        text: "Use the GoogleBooks API to explore over 25 million indexed volumes. Search by title, author, or subject.",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 33
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Grid__WEBPACK_IMPORTED_MODULE_8__["Col"], {
+        size: "md-4",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 39
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Card__WEBPACK_IMPORTED_MODULE_7__["Card"], {
+        title: "Track",
+        icon: "book-open",
+        text: "Build a personal library of the books you've read or want to read.  Rate your past reads.",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 40
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Grid__WEBPACK_IMPORTED_MODULE_8__["Col"], {
+        size: "md-4",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 46
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Card__WEBPACK_IMPORTED_MODULE_7__["Card"], {
+        title: "Share",
+        icon: "share-alt",
+        text: "Found a book you want to share with the world?  Text/email reading suggestions to fellow bibliophiles.",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 47
+        },
+        __self: this
+      }))), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Grid__WEBPACK_IMPORTED_MODULE_8__["Row"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 54
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(_components_Grid__WEBPACK_IMPORTED_MODULE_8__["Col"], {
+        size: "12",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("blockquote", {
+        className: "blockquote text-center home-about",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 56
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+        className: "mb-0",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 57
+        },
+        __self: this
+      }, "Read. Read anything. Read the things they say are good for you, and the things they claim are junk. You\u2019ll find what you need to find. Just read "), react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("footer", {
+        className: "blockquote-footer",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 59
+        },
+        __self: this
+      }, "Neil Gaiman")))))));
+    }
+  }]);
+
+  return Home;
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Home);
+
+/***/ }),
+
+/***/ "./src/pages/NoMatch.js":
+/*!******************************!*\
+  !*** ./src/pages/NoMatch.js ***!
+  \******************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _components_Grid__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../components/Grid */ "./src/components/Grid/index.js");
+/* harmony import */ var _components_Jumbotron__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../components/Jumbotron */ "./src/components/Jumbotron/index.js");
+/* harmony import */ var _404_png__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./404.png */ "./src/pages/404.png");
+/* harmony import */ var _404_png__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_404_png__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./style.css */ "./src/pages/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_4__);
+var _jsxFileName = "C:\\Users\\lilbntm\\GoogleBooks\\client\\src\\pages\\NoMatch.js";
+
+
+
+
+
+
+function NoMatch() {
+  var _this = this;
+
+  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("div", {
+    className: "no-match",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("h3", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, "Page not Found"), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement("button", {
+    className: "btn btn-home",
+    onClick: function onClick() {
+      return _this.props.history.push('/home');
+    },
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  }, "Home"));
+}
+
+/* harmony default export */ __webpack_exports__["default"] = (NoMatch);
+
+/***/ }),
+
+/***/ "./src/pages/Saved.js":
+/*!****************************!*\
+  !*** ./src/pages/Saved.js ***!
+  \****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/classCallCheck */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createClass */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/getPrototypeOf */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_5___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_5__);
+/* harmony import */ var _components_DeleteBtn__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ../components/DeleteBtn */ "./src/components/DeleteBtn/index.js");
+/* harmony import */ var _utils_API__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../utils/API */ "./src/utils/API.js");
+/* harmony import */ var _components_Jumbotron__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/Jumbotron */ "./src/components/Jumbotron/index.js");
+/* harmony import */ var react_router_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-router-dom */ "./node_modules/react-router-dom/esm/react-router-dom.js");
+/* harmony import */ var _components_List__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/List */ "./src/components/List/index.js");
+/* harmony import */ var _components_Form__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/Form */ "./src/components/Form/index.js");
+/* harmony import */ var react_star_rating_component__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! react-star-rating-component */ "./node_modules/react-star-rating-component/index.js");
+/* harmony import */ var react_star_rating_component__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(react_star_rating_component__WEBPACK_IMPORTED_MODULE_12__);
+/* harmony import */ var ag_grid_react__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ag-grid-react */ "./node_modules/ag-grid-react/main.js");
+/* harmony import */ var ag_grid_react__WEBPACK_IMPORTED_MODULE_13___default = /*#__PURE__*/__webpack_require__.n(ag_grid_react__WEBPACK_IMPORTED_MODULE_13__);
+/* harmony import */ var ag_grid_community_dist_styles_ag_grid_css__WEBPACK_IMPORTED_MODULE_14__ = __webpack_require__(/*! ag-grid-community/dist/styles/ag-grid.css */ "./node_modules/ag-grid-community/dist/styles/ag-grid.css");
+/* harmony import */ var ag_grid_community_dist_styles_ag_grid_css__WEBPACK_IMPORTED_MODULE_14___default = /*#__PURE__*/__webpack_require__.n(ag_grid_community_dist_styles_ag_grid_css__WEBPACK_IMPORTED_MODULE_14__);
+/* harmony import */ var ag_grid_community_dist_styles_ag_theme_balham_css__WEBPACK_IMPORTED_MODULE_15__ = __webpack_require__(/*! ag-grid-community/dist/styles/ag-theme-balham.css */ "./node_modules/ag-grid-community/dist/styles/ag-theme-balham.css");
+/* harmony import */ var ag_grid_community_dist_styles_ag_theme_balham_css__WEBPACK_IMPORTED_MODULE_15___default = /*#__PURE__*/__webpack_require__.n(ag_grid_community_dist_styles_ag_theme_balham_css__WEBPACK_IMPORTED_MODULE_15__);
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_16__ = __webpack_require__(/*! ./style.css */ "./src/pages/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_16___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_16__);
+
+
+
+
+
+var _jsxFileName = "C:\\Users\\lilbntm\\GoogleBooks\\client\\src\\pages\\Saved.js";
+
+
+
+
+
+
+
+
+
+
+
+
+
+var Saved =
+/*#__PURE__*/
+function (_Component) {
+  Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_4__["default"])(Saved, _Component);
+
+  function Saved(_props) {
+    var _this;
+
+    Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_0__["default"])(this, Saved);
+
+    _this = Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_2__["default"])(this, Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_3__["default"])(Saved).call(this, _props));
+
+    _this.loadBooks = function () {
+      _utils_API__WEBPACK_IMPORTED_MODULE_7__["default"].getUserBooks(_this.state.user).then(function (res) {
+        _this.setState({
+          rowData: res.data.favorites
+        });
+
+        _this.setState({
+          books: res.data.favorites
+        });
+      }).catch(function (err) {
+        return console.log(err);
+      });
+    };
+
+    _this.renderCover = function (params) {
+      if (params.value) {
+        var img = "<img border='0' width='55' height='80' " + "style='margin: 3px' src='" + params.value + "'>";
+        return img;
+      } else {
+        return null;
+      }
+    };
+
+    _this.renderTitleLink = function (params) {
+      if (params.value) {
+        var link = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+          href: "/books/" + params.data.googleID,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 70
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("strong", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 71
+          },
+          __self: this
+        }, " ", params.value, " "));
+        return link;
+      } else {
+        return null;
+      }
+    };
+
+    _this.renderStars = function (params) {
+      if (params.value) {
+        var stars = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(react_star_rating_component__WEBPACK_IMPORTED_MODULE_12___default.a, {
+          name: params.data.title,
+          starCount: 5,
+          value: params.value,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 81
+          },
+          __self: this
+        });
+        return stars;
+      } else {
+        return null;
+      }
+    };
+
+    _this.renderButtons = function (params) {
+      if (params.value) {
+        var edit = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 94
+          },
+          __self: this
+        }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("a", {
+          className: "edit",
+          href: "/books/" + params.value,
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 94
+          },
+          __self: this
+        }, " edit "));
+        var del = react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("p", {
+          className: "delete",
+          onClick: function onClick() {
+            return _this.deleteBook(params.value);
+          },
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 95
+          },
+          __self: this
+        }, " delete ");
+        return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+          className: "actions",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 96
+          },
+          __self: this
+        }, " ", edit, " ", del, " ");
+      } else {
+        return null;
+      }
+    };
+
+    _this.handleClick = function (props) {
+      console.log("clicked: " + props);
+    };
+
+    _this.deleteBook = function (id) {
+      _utils_API__WEBPACK_IMPORTED_MODULE_7__["default"].deleteBook(_this.state.user, id).then(function (res) {
+        return _this.loadBooks();
+      }).catch(function (err) {
+        return console.log(err);
+      });
+    };
+
+    _this.onGridReady = function (params) {
+      _this.gridApi = params.api;
+      _this.gridColumnApi = params.columnApi;
+
+      _this.gridApi.sizeColumnsToFit();
+
+      window.onresize = function () {
+        _this.gridApi.sizeColumnsToFit();
+      };
+    };
+
+    _this.onGridSizeChanged = function (params) {
+      // get the current grids width
+      var gridWidth = document.getElementById("grid-wrapper").offsetWidth; // keep track of which columns to hide/show
+
+      var columnsToShow = [];
+      var columnsToHide = [];
+
+      if (gridWidth > 600) {
+        columnsToShow = ["imageURL", "author", "title", "rating", "googleID"];
+      } else if (gridWidth > 400 && gridWidth < 600) {
+        columnsToShow = ["imageURL", "author", "title", "googleID"];
+        columnsToHide = ["rating"];
+      } else {
+        columnsToShow = ["imageURL", "author", "title"];
+        columnsToHide = ["rating", "googleID"];
+      } // show/hide columns based on current grid width
+
+
+      params.columnApi.setColumnsVisible(columnsToShow, true);
+      params.columnApi.setColumnsVisible(columnsToHide, false); // fill out any available space to ensure there are no gaps
+
+      params.api.sizeColumnsToFit();
+    };
+
+    _this.state = {
+      books: [],
+      user: "libby2@libby.com",
+      columnDefs: [{
+        headerName: "Cover",
+        field: "imageURL",
+        cellRenderer: _this.renderCover,
+        autoHeight: true,
+        width: 100
+      }, {
+        headerName: "Author",
+        field: "author",
+        sortable: true,
+        filter: true,
+        cellClass: 'author',
+        resizable: true
+      }, {
+        headerName: "Title",
+        field: "title",
+        sortable: true,
+        filter: true,
+        cellClass: 'title',
+        resizable: true,
+        cellRendererFramework: _this.renderTitleLink
+      }, {
+        headerName: "Rating",
+        field: "rating",
+        sortable: true,
+        filter: true,
+        resizable: true,
+        cellRendererFramework: _this.renderStars
+      }, {
+        headerName: "Update",
+        field: "googleID",
+        resizable: true,
+        cellRendererFramework: _this.renderButtons
+      }]
+    };
+    return _this;
+  }
+
+  Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_1__["default"])(Saved, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.loadBooks();
+    }
+  }, {
+    key: "componentDidUpdate",
+    value: function componentDidUpdate() {
+      console.log("updated");
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var searchMessage = '<div style="pointer-events: auto;">It looks like your reading list is empty!';
+      searchMessage += ' Use our <a href="/search">Search</a> feature to add some books.';
+      return react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "container",
+        id: "grid-wrapper",
+        style: {
+          height: "100vh",
+          padding: "0",
+          maxWidth: "100%"
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 152
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement("div", {
+        className: "ag-theme-balham",
+        style: {
+          margin: "0 auto",
+          height: "100%",
+          width: "100%"
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 153
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_5___default.a.createElement(ag_grid_react__WEBPACK_IMPORTED_MODULE_13__["AgGridReact"], {
+        columnDefs: this.state.columnDefs,
+        rowData: this.state.rowData,
+        context: this.state.context,
+        overlayNoRowsTemplate: searchMessage,
+        frameworkComponents: this.state.frameworkComponents,
+        onGridReady: this.onGridReady,
+        onGridSizeChanged: this.onGridSizeChanged,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 160
+        },
+        __self: this
+      })));
+    }
+  }]);
+
+  return Saved;
+}(react__WEBPACK_IMPORTED_MODULE_5__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Saved);
+
+/***/ }),
+
+/***/ "./src/pages/Search.js":
+/*!*****************************!*\
+  !*** ./src/pages/Search.js ***!
+  \*****************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/defineProperty */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/defineProperty.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/classCallCheck */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/classCallCheck.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createClass */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/createClass.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/possibleConstructorReturn.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/getPrototypeOf */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/getPrototypeOf.js");
+/* harmony import */ var C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits */ "./node_modules/babel-preset-react-app/node_modules/@babel/runtime/helpers/esm/inherits.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_6___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_6__);
+/* harmony import */ var _utils_API__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ../utils/API */ "./src/utils/API.js");
+/* harmony import */ var _components_List__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ../components/List */ "./src/components/List/index.js");
+/* harmony import */ var _components_Jumbotron__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ../components/Jumbotron */ "./src/components/Jumbotron/index.js");
+/* harmony import */ var _components_Form__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../components/Form */ "./src/components/Form/index.js");
+/* harmony import */ var _no_cover_jpg__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./no_cover.jpg */ "./src/pages/no_cover.jpg");
+/* harmony import */ var _no_cover_jpg__WEBPACK_IMPORTED_MODULE_11___default = /*#__PURE__*/__webpack_require__.n(_no_cover_jpg__WEBPACK_IMPORTED_MODULE_11__);
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ../style.css */ "./src/style.css");
+/* harmony import */ var _style_css__WEBPACK_IMPORTED_MODULE_12___default = /*#__PURE__*/__webpack_require__.n(_style_css__WEBPACK_IMPORTED_MODULE_12__);
+
+
+
+
+
+
+var _jsxFileName = "C:\\Users\\lilbntm\\GoogleBooks\\client\\src\\pages\\Search.js";
+
+
+
+
+
+
+
+
+var Search =
+/*#__PURE__*/
+function (_Component) {
+  Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_inherits__WEBPACK_IMPORTED_MODULE_5__["default"])(Search, _Component);
+
+  function Search() {
+    var _getPrototypeOf2;
+
+    var _this;
+
+    Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_classCallCheck__WEBPACK_IMPORTED_MODULE_1__["default"])(this, Search);
+
+    for (var _len = arguments.length, args = new Array(_len), _key = 0; _key < _len; _key++) {
+      args[_key] = arguments[_key];
+    }
+
+    _this = Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_possibleConstructorReturn__WEBPACK_IMPORTED_MODULE_3__["default"])(this, (_getPrototypeOf2 = Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_getPrototypeOf__WEBPACK_IMPORTED_MODULE_4__["default"])(Search)).call.apply(_getPrototypeOf2, [this].concat(args)));
+    _this.state = {
+      books: [],
+      results: [],
+      search: "",
+      filter: "",
+      user: "libby2@libby.com"
+    };
+
+    _this.loadBooks = function () {
+      _utils_API__WEBPACK_IMPORTED_MODULE_7__["default"].getUserBooks(_this.state.user).then(function (res) {
+        _this.setState({
+          books: res.data.favorites
+        });
+      }).catch(function (err) {
+        return console.log(err);
+      });
+    };
+
+    _this.searchBooks = function (event) {
+      event.preventDefault();
+      _utils_API__WEBPACK_IMPORTED_MODULE_7__["default"].searchBooks(_this.state.search, _this.state.filter).then(function (res) {
+        _this.filterResults();
+
+        _this.setState({
+          results: res.data.items
+        });
+      }).catch(function (err) {
+        return console.log(err);
+      });
+    };
+
+    _this.filterResults = function (id) {
+      var res = _this.state.books.map(function (e) {
+        return e.googleID;
+      });
+
+      if (res.includes(id)) {
+        var obj = _this.state.books.filter(function (e) {
+          return e.googleID === id;
+        });
+
+        return {
+          saved: true,
+          stars: obj[0].rating
+        };
+      } else {
+        return {
+          saved: false,
+          stars: 0
+        };
+      }
+
+      ;
+    };
+
+    _this.handleInputChange = function (event) {
+      var _event$target = event.target,
+          name = _event$target.name,
+          value = _event$target.value;
+
+      _this.setState(Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_defineProperty__WEBPACK_IMPORTED_MODULE_0__["default"])({}, name, value));
+    };
+
+    _this.reset = function (event) {
+      event.preventDefault();
+
+      _this.setState({
+        filter: "",
+        search: ""
+      });
+
+      console.log(_this.state.filter, _this.state.search);
+    };
+
+    _this.saveBook = function (p, s) {
+      _utils_API__WEBPACK_IMPORTED_MODULE_7__["default"].saveUserBook(_this.state.user, p.googleID, {
+        googleID: p.googleID,
+        imageURL: p.image,
+        title: p.title,
+        author: p.author,
+        description: p.description,
+        rating: s
+      }).then(function (res) {
+        return _this.loadBooks();
+      }).catch(function (err) {
+        return console.log(err);
+      });
+    };
+
+    _this.deleteBook = function (p) {
+      _utils_API__WEBPACK_IMPORTED_MODULE_7__["default"].deleteBook(_this.state.user, p.googleID).then(function (res) {
+        return _this.loadBooks();
+      }).catch(function (err) {
+        return console.log(err);
+      });
+    };
+
+    return _this;
+  }
+
+  Object(C_Users_lilbntm_GoogleBooks_client_node_modules_babel_preset_react_app_node_modules_babel_runtime_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(Search, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.loadBooks();
+    }
+  }, {
+    key: "render",
+    value: function render() {
+      var _this2 = this;
+
+      return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(react__WEBPACK_IMPORTED_MODULE_6___default.a.Fragment, null, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Jumbotron__WEBPACK_IMPORTED_MODULE_9__["SmallJumbotron"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 96
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h3", {
+        style: {
+          color: "#fff",
+          fontSize: "1.95rem"
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 97
+        },
+        __self: this
+      }, "Book Search"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("form", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 98
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Form__WEBPACK_IMPORTED_MODULE_10__["Input"], {
+        value: this.state.search,
+        onChange: this.handleInputChange,
+        name: "search",
+        placeholder: "Search",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 99
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Form__WEBPACK_IMPORTED_MODULE_10__["CheckboxDiv"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 105
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Form__WEBPACK_IMPORTED_MODULE_10__["CheckBox"], {
+        id: "partial",
+        text: "Preview available",
+        name: "filter",
+        value: "partial",
+        checked: this.state.filter === 'partial',
+        onChange: this.handleInputChange,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 106
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Form__WEBPACK_IMPORTED_MODULE_10__["CheckBox"], {
+        id: "free-ebooks",
+        text: "Free eBook available",
+        name: "filter",
+        checked: this.state.filter === 'free-ebooks',
+        value: "free-ebooks",
+        onChange: this.handleInputChange,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 115
+        },
+        __self: this
+      }), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Form__WEBPACK_IMPORTED_MODULE_10__["CheckBox"], {
+        id: "paid-ebooks",
+        text: "eBook available for purchase",
+        name: "filter",
+        checked: this.state.filter === 'paid-ebooks',
+        value: "paid-ebooks",
+        onChange: this.handleInputChange,
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 124
+        },
+        __self: this
+      })), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 133
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Form__WEBPACK_IMPORTED_MODULE_10__["FormBtn"], {
+        disabled: !this.state.search,
+        onClick: this.searchBooks,
+        className: "btn btn-success my-2 my-sm-0",
+        style: {
+          display: "inline"
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 134
+        },
+        __self: this
+      }, "Search"), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Form__WEBPACK_IMPORTED_MODULE_10__["FormBtn"], {
+        disabled: !this.state.search,
+        onClick: this.reset,
+        className: "btn btn-danger my-2 my-sm-0",
+        style: {
+          display: "inline"
+        },
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 142
+        },
+        __self: this
+      }, "Reset")))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        className: "container",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 154
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 155
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_Form__WEBPACK_IMPORTED_MODULE_10__["Collapse"], {
+        header: "How to use the GoogleBooks API to find new, exciting literature.",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 156
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 159
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("strong", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 159
+        },
+        __self: this
+      }, "Simple Search: "), "enter a text string in the search box to find volumes that match.  You can further refine your search by using keyword indicators and/or filters."), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 161
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("strong", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 161
+        },
+        __self: this
+      }, "Keywords: "), "use intitle, inauthor, and insubject (eg insubject:plants) to return results where the text following the colon is found in the title, author, or subject."), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("p", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 163
+        },
+        __self: this
+      }, react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("strong", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 163
+        },
+        __self: this
+      }, "Filters: "), "use the radio buttons to restrict results to books that have a preview or ebook available through GoogleBooks."))), react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("div", {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 167
+        },
+        __self: this
+      }, !this.state.results.length ? react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement("h3", {
+        className: "results-message",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 169
+        },
+        __self: this
+      }, "No results to display") : react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_List__WEBPACK_IMPORTED_MODULE_8__["List"], {
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 172
+        },
+        __self: this
+      }, this.state.results.map(function (result) {
+        return react__WEBPACK_IMPORTED_MODULE_6___default.a.createElement(_components_List__WEBPACK_IMPORTED_MODULE_8__["CardItem"], {
+          key: result.id + Math.floor(Math.random() * 10) + 1,
+          googleID: result.id,
+          link: result.volumeInfo.previewLink,
+          image: !result.volumeInfo.imageLinks ? _no_cover_jpg__WEBPACK_IMPORTED_MODULE_11___default.a : result.volumeInfo.imageLinks.thumbnail,
+          title: result.volumeInfo.title,
+          author: result.volumeInfo.authors,
+          description: result.volumeInfo.description,
+          stars: _this2.filterResults(result.id).stars,
+          saveBook: _this2.saveBook,
+          deleteBook: _this2.deleteBook,
+          saved: _this2.filterResults(result.id).saved ? "saved" : "not saved",
+          __source: {
+            fileName: _jsxFileName,
+            lineNumber: 174
+          },
+          __self: this
+        });
+      })))));
+    }
+  }]);
+
+  return Search;
+}(react__WEBPACK_IMPORTED_MODULE_6__["Component"]);
+
+/* harmony default export */ __webpack_exports__["default"] = (Search);
+
+/***/ }),
+
+/***/ "./src/pages/no_cover.jpg":
+/*!********************************!*\
+  !*** ./src/pages/no_cover.jpg ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
+module.exports = "data:image/jpeg;base64,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"
+
+/***/ }),
+
+/***/ "./src/pages/style.css":
+/*!*****************************!*\
+  !*** ./src/pages/style.css ***!
+  \*****************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../../node_modules/css-loader??ref--6-oneOf-3-1!../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/pages/style.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../../node_modules/css-loader??ref--6-oneOf-3-1!../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/pages/style.css", function() {
+		var newContent = __webpack_require__(/*! !../../node_modules/css-loader??ref--6-oneOf-3-1!../../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/pages/style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/style.css":
+/*!***********************!*\
+  !*** ./src/style.css ***!
+  \***********************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+
+var content = __webpack_require__(/*! !../node_modules/css-loader??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/style.css");
+
+if(typeof content === 'string') content = [[module.i, content, '']];
+
+var transform;
+var insertInto;
+
+
+
+var options = {"hmr":true}
+
+options.transform = transform
+options.insertInto = undefined;
+
+var update = __webpack_require__(/*! ../node_modules/style-loader/lib/addStyles.js */ "./node_modules/style-loader/lib/addStyles.js")(content, options);
+
+if(content.locals) module.exports = content.locals;
+
+if(true) {
+	module.hot.accept(/*! !../node_modules/css-loader??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/style.css", function() {
+		var newContent = __webpack_require__(/*! !../node_modules/css-loader??ref--6-oneOf-3-1!../node_modules/postcss-loader/src??postcss!./style.css */ "./node_modules/css-loader/index.js?!./node_modules/postcss-loader/src/index.js?!./src/style.css");
+
+		if(typeof newContent === 'string') newContent = [[module.i, newContent, '']];
+
+		var locals = (function(a, b) {
+			var key, idx = 0;
+
+			for(key in a) {
+				if(!b || a[key] !== b[key]) return false;
+				idx++;
+			}
+
+			for(key in b) idx--;
+
+			return idx === 0;
+		}(content.locals, newContent.locals));
+
+		if(!locals) throw new Error('Aborting CSS HMR due to changed css-modules locals.');
+
+		update(newContent);
+	});
+
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
+/***/ "./src/utils/API.js":
+/*!**************************!*\
+  !*** ./src/utils/API.js ***!
+  \**************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
+/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_0__);
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  //gets user books - working
+  getUserBooks: function getUserBooks(email) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/books/users/" + email);
+  },
+  //search for books - working
+  searchBooks: function searchBooks(q, f) {
+    var apiURL = "https://www.googleapis.com/books/v1/volumes?";
+    var apiKey = "&key=AIzaSyALT3IQvbkQs5TifbVM8LfyjCKQIgpA9Ns";
+    var query = "q=" + q;
+    var filter = "&filter=" + f;
+
+    if (f === "" || f === "none") {
+      return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(apiURL + query + apiKey);
+    } else {
+      return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get(apiURL + query + filter + apiKey);
+    }
+  },
+  // Gets the book with the given id
+  getBook: function getBook(user, bookID) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.get("/api/books/user/" + user + "/" + bookID);
+  },
+  // Deletes the book with the given id - working
+  deleteBook: function deleteBook(user, bookID) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.delete("/api/books/user/" + user + "/" + bookID);
+  },
+  // Saves a book to the user - working
+  saveUserBook: function saveUserBook(user, bookID, bookData) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.put("/api/books/user/" + user + "/" + bookID, {
+      "email": user,
+      "bookData": bookData
+    });
+  },
+  //creates a user - working
+  createUser: function createUser(userData) {
+    return axios__WEBPACK_IMPORTED_MODULE_0___default.a.post("/api/books/users", userData);
+  }
+});
+
+/***/ }),
+
+/***/ 0:
+/*!**********************************************************************************!*\
+  !*** multi ./node_modules/react-dev-utils/webpackHotDevClient.js ./src/index.js ***!
+  \**********************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+__webpack_require__(/*! C:\Users\lilbntm\GoogleBooks\client\node_modules\react-dev-utils\webpackHotDevClient.js */"./node_modules/react-dev-utils/webpackHotDevClient.js");
+module.exports = __webpack_require__(/*! C:\Users\lilbntm\GoogleBooks\client\src\index.js */"./src/index.js");
+
+
+/***/ })
+
+},[[0,"runtime~main",1]]]);
+//# sourceMappingURL=main.chunk.js.map

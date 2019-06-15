@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { MessageButton } from "../Message";
 import StarRatingComponent from 'react-star-rating-component';
 import "./style.css";
 
@@ -26,13 +27,8 @@ export class CardItem extends Component {
     };
   }
 
-  componentDidMount() {
-    console.log(this.state.book);
-    console.log(this.state.rating);
-  }
 
   onStarClick(nextValue, prevValue, name) {
-    console.log(this.state.book.stars)
     this.setState({rating: nextValue});
   };
 
@@ -43,10 +39,11 @@ export class CardItem extends Component {
 
     return (
       <li className="media">
-        <img src={props.image} className="mr-3" alt="..."/>
+        <img src={props.image} className="mr-3 src-img" alt="..."/>
         <div className="media-body">
             <h5 className="mt-0 mb-1">{(!props.title) ? "" : props.title }</h5>
             <h6>{(!props.author) ? "Author unknown" : props.author.map(auth => (auth + " "))}</h6> 
+            <i className="fas fa-share-alt"  onClick={() => props.onModalClick(props)}></i>
             <a href={props.link} target="blank"><button className="btn btn-custom btn-sm">Preview</button></a>
             {(props.saved === "not saved") ? 
               <button className="btn btn-custom btn-sm" onClick={()=>props.saveBook(props, this.state.rating)}>Save</button>

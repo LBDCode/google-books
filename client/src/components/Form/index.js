@@ -43,12 +43,28 @@ export function CheckboxDiv(props) {
 export function CheckBox(props) {
   return(
     <div className="form-check">
-      <input className="form-check-input" type="checkbox" value="" id={props.id}/>
-      <label className="form-check-label" for={props.id}>
-        {props.text}
-      </label>
-    </div>  
+      <input className="form-check-input" type="radio" {...props}/>
+      <label className="form-check-label" for={props.id}>{props.text}</label>
+    </div>
   )
+}
+
+export function Collapse(props) {
+  return(
+    <div className="collapse-wrapper">
+      <h4 className="collapse-header">
+        <span className="collapse-toggle" data-toggle="collapse" href="#search-collapse" role="button" aria-expanded="false" aria-controls="search-collapse">
+        <i className="fas fa-plus"></i>
+        </span>
+        {props.header}
+      </h4>
+      <div className="collapse" id="search-collapse">
+        <div className="card card-body collapse-body">
+          {props.children}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 

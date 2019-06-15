@@ -19,17 +19,18 @@ class Saved extends Component {
       
       this.state = {        
         books: [],
-        user: "libby2@libby.com",
+        user: "guest@guest.com",
+        userName: "Guest",
         columnDefs: [{
           headerName: "Cover", field: "imageURL", cellRenderer: this.renderCover,  autoHeight: true, width: 100
         }, {
-          headerName: "Author", field: "author", sortable: true, filter: true,  cellClass: 'author' 
+          headerName: "Author", field: "author", sortable: true, filter: true,  cellClass: 'author', resizable: true
         }, {
-          headerName: "Title", field: "title", sortable: true, filter: true, cellClass: 'title', cellRendererFramework: this.renderTitleLink
+          headerName: "Title", field: "title", sortable: true, filter: true, cellClass: 'title', resizable: true, cellRendererFramework: this.renderTitleLink
         }, {
-          headerName: "Rating", field: "rating", sortable: true, filter: true, cellRendererFramework: this.renderStars 
+          headerName: "Rating", field: "rating", sortable: true, filter: true, resizable: true, cellRendererFramework: this.renderStars 
         }, {
-          headerName: "Update", field: "googleID", cellRendererFramework: this.renderButtons 
+          headerName: "Update", field: "googleID",  resizable: true, cellRendererFramework: this.renderButtons 
         }
         ],
       }
@@ -102,7 +103,6 @@ class Saved extends Component {
     handleClick = props => {
       console.log("clicked: "+ props);
     };
-
   
     deleteBook = id => {
       API.deleteBook(this.state.user, id)
@@ -113,20 +113,50 @@ class Saved extends Component {
     onGridReady = params => {
       this.gridApi = params.api;
       this.gridColumnApi = params.columnApi;
-      params.api.sizeColumnsToFit();
+      this.gridApi.sizeColumnsToFit();
+      window.onresize = () => {
+        this.gridApi.sizeColumnsToFit();
+      }
     };
+
+    onGridSizeChanged = params => {
+      // get the current grids width
+      var gridWidth = document.getElementById("grid-wrapper").offsetWidth;
+
+      // keep track of which columns to hide/show
+      var columnsToShow = [];
+      var columnsToHide = [];
+
+      if (gridWidth > 600){
+        columnsToShow = ["imageURL", "author", "title", "rating", "googleID"];
+      } else if(gridWidth > 400 && gridWidth < 600) {
+        columnsToShow = ["imageURL", "author", "title", "googleID"];
+        columnsToHide = ["rating"]
+      } else {
+        columnsToShow = ["imageURL", "author", "title"];
+        columnsToHide = ["rating", "googleID"];
+      }
+
+      // show/hide columns based on current grid width
+      params.columnApi.setColumnsVisible(columnsToShow, true);
+      params.columnApi.setColumnsVisible(columnsToHide, false);
+
+      // fill out any available space to ensure there are no gaps
+      params.api.sizeColumnsToFit();
+    }; 
 
     render() {
 
       var searchMessage = '<div style="pointer-events: auto;">It looks like your reading list is empty!';
       searchMessage += ' Use our <a href="/search">Search</a> feature to add some books.';
       return (
-        <div>
+        <div className="container" id="grid-wrapper" style={{height: "87vh", padding: "0", maxWidth: "100%"}}>
           <div 
             className="ag-theme-balham"
             style={{ 
-            height: '500px', 
-            width: '900px' }} 
+            margin: "0 auto",
+            height: "100%", 
+            width: "100%" }} 
           >
             <AgGridReact
               columnDefs={this.state.columnDefs}
@@ -135,6 +165,7 @@ class Saved extends Component {
               overlayNoRowsTemplate={searchMessage}
               frameworkComponents={this.state.frameworkComponents}
               onGridReady={this.onGridReady}
+              onGridSizeChanged={this.onGridSizeChanged}
             >  
             </AgGridReact>
           </div>

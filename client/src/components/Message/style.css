@@ -1,0 +1,31 @@
+.custom-modal-cover {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10; 
+    transform: translateZ(0);
+    background-color: rgba(34, 34, 34, 0.438);
+}
+  
+.custom-modal {
+
+    margin: 30px auto 0 auto;
+    width: 50%;
+    height: 50%;
+    padding: 2.5em 1.5em 1.5em 1.5em;
+    background-color: #FFFFFF;
+    box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @media screen and (min-width: 500px) {
+        left: 50%;
+        top: 50%;
+        height: auto;
+        transform: translate(-50%, -50%);
+        max-width: 30em;
+        max-height: calc(100% - 1em);
+    }
+}

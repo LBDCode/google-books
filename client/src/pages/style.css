@@ -47,7 +47,10 @@
     padding-top: 200px;
 }
 
-
+.results-message {
+    color: darkgray;
+    text-align: center;
+}
 
 .actions {
     white-space: normal !important;
@@ -62,8 +65,8 @@
     color: red;
 }
 
-.delete :hover {
-    text-decoration:underline; 
+.delete:hover {
+    text-decoration:underline!important; 
 }
 
 .actions P {

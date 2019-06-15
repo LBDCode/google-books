@@ -8,16 +8,18 @@ export default {
   },
   //search for books - working
   searchBooks: function(q, f) {
-    console.log(q, f);
     const apiURL = "https://www.googleapis.com/books/v1/volumes?";
     const apiKey = "&key=AIzaSyALT3IQvbkQs5TifbVM8LfyjCKQIgpA9Ns";
-    let query = "q=" + q;
-    let filter = "&filter=" + f;
-    return axios.get(apiURL + query + filter + apiKey);
+    const query = "q=" + q;
+    const filter = "&filter=" + f;
+    if (f === ""|| f === "none") {
+      return axios.get(apiURL + query + apiKey);
+    } else {
+      return axios.get(apiURL + query + filter + apiKey);
+    }
   },
   // Gets the book with the given id
   getBook: function(user, bookID) {
-    console.log(user, bookID);
     return axios.get("/api/books/user/" + user + "/" + bookID);
   },
   // Deletes the book with the given id - working
@@ -26,11 +28,11 @@ export default {
   },
   // Saves a book to the user - working
   saveUserBook: function(user, bookID, bookData) {
-    console.log(bookData);
     return axios.put("/api/books/user/" + user + "/" + bookID, {"email": user, "bookData": bookData});
   },
   //creates a user - working
   createUser: function(userData) {
+    console.log(userData);
     return axios.post("/api/books/users", userData)
   }
 };

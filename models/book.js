@@ -17,8 +17,9 @@ const bookSchema = new Schema({
   _id: false
 });
 
-const userSchema = new Schema({
+const userSchema = new Schema({  
   email: {type: String, required: true},
+  userName: {type: String},
   favorites: [bookSchema],
 });
 

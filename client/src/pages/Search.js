@@ -2,21 +2,29 @@ import React, { Component } from "react";
 import API from "../utils/API";
 import { List, CardItem } from "../components/List";
 import {SmallJumbotron }from "../components/Jumbotron";
-import { Input, FormBtn, CheckBox, CheckboxDiv } from "../components/Form";
+import { Input, FormBtn, CheckBox, CheckboxDiv, Collapse } from "../components/Form";
+import { Modal } from "../components/Message";
+import DefaultImage from "./no_cover.jpg";
 import "../style.css";
 
 
 class Search extends Component {
   state = {
-    books: [],
-    results: [],
-    search: "",
-    filter: "",
-    user: "libby2@libby.com",
-  };
+      books: [],
+      results: [],
+      search: "",
+      filter: "",
+      user: "guest@guest.com",
+      userName: "Guest",
+      showModal: false,
+      share: {
+        title: "",
+        author: "",
+        link: ""
+      }
+    };
 
-  defaultImg = "https://mtf.plusrewards.com.au.mastercard.com/storage/documents/ebooks-default-img.svg";
-
+ 
   componentDidMount() {
     this.loadBooks();
   }
@@ -30,10 +38,7 @@ class Search extends Component {
       .catch(err => console.log(err));  
   };
 
-  setSearchFilter = () => {
-    this.setState( {filter: "free-ebooks"});
-    console.log(this.state.filter);
-  };
+
 
   searchBooks = event => {
     event.preventDefault();
@@ -56,10 +61,37 @@ class Search extends Component {
   };  
 
   handleInputChange = event => {
-    const { name, value } = event.target;
+    const{ name, value } = event.target;
+
     this.setState({
       [name]: value
     });
+
+  };
+
+  reset = event => {
+    event.preventDefault();
+    this.setState({
+      filter : "",
+      search: ""
+    });
+    console.log(this.state.filter, this.state.search);
+  };
+
+  onModalClick= (p) => {
+    var share = {...share};
+    share = {
+      title: p.title,
+      author: p.author[0],
+      link: p.link
+    };
+    this.setState( { share: share });
+    this.toggleModal()
+  };
+
+  toggleModal = () => {
+    this.setState( { showModal: !this.state.showModal })
+    console.log(this.state.share, this.state.showModal);
   };
 
   saveBook = ( p, s )=> {
@@ -88,77 +120,113 @@ class Search extends Component {
     return (
       <>
         <SmallJumbotron>
-          <h3 style={{color:"#fff"}}>Book Search</h3>
+          <h3 style={{color:"#fff", fontSize: "1.95rem"}}>Book Search</h3>
           <form >
               <Input 
                 value={this.state.search}
                 onChange={this.handleInputChange}
                 name="search"
                 placeholder="Search"
-              />
+              />              
               <CheckboxDiv>
                 <CheckBox
                   id="partial"
                   text="Preview available"
-                  onChange={this.setSearchFilter}
+                  name="filter"
+                  value="partial"
+                  checked={this.state.filter === 'partial'}
+                  onChange={this.handleInputChange}
                 >
                 </CheckBox>
                 <CheckBox
                   id="free-ebooks"
                   text="Free eBook available"
-                  onChange={this.setSearchFilter}
-
+                  name="filter"
+                  checked={this.state.filter === 'free-ebooks'}
+                  value="free-ebooks"
+                  onChange={this.handleInputChange}
                 >
                 </CheckBox>
                 <CheckBox
                   id="paid-ebooks"
                   text="eBook available for purchase"
-                  onChange={this.setSearchFilter}
-                >
+                  name="filter"
+                  checked={this.state.filter === 'paid-ebooks'}
+                  value="paid-ebooks"
+                  onChange={this.handleInputChange}                >
                 </CheckBox>
-                </CheckboxDiv>
-              <FormBtn
+                </CheckboxDiv> 
+              <div>
+                <FormBtn
                 disabled={!(this.state.search)}
                 onClick={this.searchBooks}
                 className="btn btn-success my-2 my-sm-0"
-                style={{display:"block"}}
+                style={{display:"inline"}}
               >
                 Search
               </FormBtn>
+              <FormBtn
+                disabled={!(this.state.search)}
+                onClick={this.reset}
+                className="btn btn-danger my-2 my-sm-0"
+                style={{display:"inline"}}
+              >
+               Reset
+              </FormBtn>
+            </div>
           </form>
         </SmallJumbotron>
 
         <div className="container">
           <div>
-            <h4 style={{color: "#495057", marginTop:"20px", textAlign: 'center'}}>How to use the GoogleBooks API to find new, exciting literature.</h4>
-            <strong>Simple Search: </strong> <br/>
-            <strong>Keywords: </strong>use intitle, inauthor, and insubject (eg insubject:plants) to return results where the text following 
-            the colon is found in the title, author, or subject.<br/>
-            <strong>Filters: </strong>use the checkboxes to restrict results to books that have a preview or ebook available through GoogleBooks.
+            <Collapse
+              header="How to use the GoogleBooks API to find new, exciting literature."
+            >
+              <p><strong>Simple Search: </strong>enter a text string in the search box to find volumes that match.  You 
+                can further refine your search by using keyword indicators and/or filters.</p>
+              <p><strong>Keywords: </strong>use intitle, inauthor, and insubject (eg insubject:plants) to return 
+              results where the text following the colon is found in the title, author, or subject.</p>
+              <p><strong>Filters: </strong>use the radio buttons to restrict results to books that have a preview 
+              or ebook available through GoogleBooks.</p>
+            </Collapse>
           </div>
+          {
+            this.state.showModal ? 
+            <Modal>
+              <div>
+                <h1>Hi, this is the modal</h1>
+                <h3>Share {this.state.share.title}</h3>
+              </div>
+            </Modal>
+            :
+            null
+          }
+          {/* <MessageModal share={this.state.share}></MessageModal> */}
           <div>
-            {this.state.results.length ? (
+            {!this.state.results.length ? (              
+                <h3 className="results-message">No results to display</h3>
+              ) : 
+              (
               <List>
                 {this.state.results.map(result => (
                   <CardItem
-                    key={result.id}
+                    key={result.id + Math.floor(Math.random() * 10) + 1}
                     googleID={result.id}
                     link={result.volumeInfo.previewLink}
-                    image={(!result.volumeInfo.imageLinks)? this.defaultImg : result.volumeInfo.imageLinks.thumbnail}
+                    image={(!result.volumeInfo.imageLinks)? DefaultImage : result.volumeInfo.imageLinks.thumbnail}
                     title={result.volumeInfo.title}
                     author={result.volumeInfo.authors}
                     description={result.volumeInfo.description}
                     stars={(this.filterResults(result.id).stars)}
                     saveBook={this.saveBook}
                     deleteBook={this.deleteBook}
+                    onModalClick={this.onModalClick}
                     saved={(this.filterResults(result.id).saved)? "saved" : "not saved"}
                   >
                   </CardItem>
                 ))}
               </List>
-            ) : (
-              <h3 className="results-message">No results to display</h3>
-            )}
+            ) }
           </div>
         </div>  
       </>

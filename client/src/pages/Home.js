@@ -1,11 +1,8 @@
 
 import React, { Component } from "react";
-import API from "../utils/API";
-import { List, CardItem } from "../components/List";
 import {Jumbotron, SmallJumbotron} from "../components/Jumbotron";
 import {Card} from "../components/Card";
 import { Col, Row, Container } from "../components/Grid";
-import { Input, FormBtn } from "../components/Form";
 import "../style.css";
 
 
@@ -14,10 +11,9 @@ class Home extends Component {
     books: [],
     results: [],
     search: "",
-    user: "libby2@libby.com",
+    user: "guest@guest.com",
+    userName: "Guest"
   };
-
-  defaultImg = "https://mtf.plusrewards.com.au.mastercard.com/storage/documents/ebooks-default-img.svg";
 
   render() {
     return (
@@ -59,9 +55,9 @@ class Home extends Component {
             <Row>
               <Col size="12">
                 <blockquote className="blockquote text-center home-about">
-                  <p class="mb-0">Read. Read anything. Read the things they say are good for you, 
+                  <p className="mb-0">Read. Read anything. Read the things they say are good for you, 
                   and the things they claim are junk. You’ll find what you need to find. Just read </p>
-                  <footer class="blockquote-footer">Neil Gaiman</footer>
+                  <footer className="blockquote-footer">Neil Gaiman</footer>
                 </blockquote>
               </Col>           
             </Row>

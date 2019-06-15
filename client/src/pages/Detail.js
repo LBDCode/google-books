@@ -7,7 +7,8 @@ import API from "../utils/API";
 
 class Detail extends Component {
   state = {
-    user: "libby2@libby.com",
+    user: "guest@guest.com",
+    userName: "Guest",
     book: {}
   };
 
