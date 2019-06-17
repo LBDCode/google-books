@@ -1,5 +1,6 @@
 const express = require("express");
-
+const Nexmo = require("nexmo");
+// const socket.io = require("socket.io");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
@@ -21,6 +22,6 @@ mongoose.connect(
 );
 
 // Start the API server
-app.listen(PORT, function() {
+server = app.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });

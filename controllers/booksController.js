@@ -2,7 +2,7 @@ const db = require("../models");
 
 // Defining methods for the booksController
 module.exports = {
-  //working
+  //return all info for a user
   findAll: function(req, res) {
     db.Schema.User.findOne({ email: req.params.email })
       .then(dbModel => {
@@ -10,7 +10,7 @@ module.exports = {
       })
       .catch(err => res.status(422).json(err));
   },
-  //working
+  ///return all books saved by a user
   findById: function(req, res) {
     db.Schema.User.find(
       {"email": req.params.email}, 
@@ -20,14 +20,14 @@ module.exports = {
       })
       .catch(err => res.status(422).json(err));
   },
-  //working
+  //create a new user
   createUser: function(req, res) {
     console.log(req.body);
     db.Schema.User.create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
-  //add to favs is working for everything except rating - confirm edit is working
+  //add/remove favorites for a user
   manageUserBook: function(req, res) {
     console.log(req.body.email, req.body.book);
     db.Schema.User.findOne(
@@ -57,12 +57,12 @@ module.exports = {
       }
     });
   },
-  update: function(req, res) {
-    db.Schema.Book.findOneAndUpdate({ _id: req.params.id }, req.body)
-      .then(dbModel => res.json(dbModel))
-      .catch(err => res.status(422).json(err));
-  },
-  //working
+  // update: function(req, res) {
+  //   db.Schema.Book.findOneAndUpdate({ _id: req.params.id }, req.body)
+  //     .then(dbModel => res.json(dbModel))
+  //     .catch(err => res.status(422).json(err));
+  // },
+  //delete a book from favorites
   remove: function(req, res) {
     var email = req.params.email;
     var book = req.params.book;
@@ -72,5 +72,9 @@ module.exports = {
       )
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
+  },
+  sendSMS: function(req, res) {
+    res.send(req.body)
+    console.log(req.body);
   }
 };

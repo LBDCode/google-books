@@ -16,3 +16,12 @@
   margin: 5px;
 }
 
+.share-icon {
+  color: #28a745c2;
+  margin-left: 10px;
+}
+
+.share-icon:hover {
+  color: rgba(34, 34, 34, 0.404);
+  cursor: pointer;
+}

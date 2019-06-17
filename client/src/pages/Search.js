@@ -1,9 +1,14 @@
 import React, { Component } from "react";
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 import API from "../utils/API";
 import { List, CardItem } from "../components/List";
 import {SmallJumbotron }from "../components/Jumbotron";
 import { Input, FormBtn, CheckBox, CheckboxDiv, Collapse } from "../components/Form";
-import { Modal } from "../components/Message";
+import { GenModal, MessageModal } from "../components/Message";
 import DefaultImage from "./no_cover.jpg";
 import "../style.css";
 
@@ -33,12 +38,9 @@ class Search extends Component {
     API.getUserBooks(this.state.user)
       .then(res => {
         this.setState({ books: res.data.favorites });
-      }
-      )
+      })
       .catch(err => console.log(err));  
   };
-
-
 
   searchBooks = event => {
     event.preventDefault();
@@ -51,6 +53,7 @@ class Search extends Component {
   };
 
   filterResults = (id) => {
+    //check if book already saved to user's account; if so, return true and rating
     let res = this.state.books.map(e => e.googleID);
     if (res.includes(id)) {
       let obj = this.state.books.filter(e => e.googleID === id);
@@ -75,7 +78,6 @@ class Search extends Component {
       filter : "",
       search: ""
     });
-    console.log(this.state.filter, this.state.search);
   };
 
   onModalClick= (p) => {
@@ -85,25 +87,25 @@ class Search extends Component {
       author: p.author[0],
       link: p.link
     };
-    this.setState( { share: share });
+    this.setState( { share: share })
     this.toggleModal()
   };
 
   toggleModal = () => {
     this.setState( { showModal: !this.state.showModal })
-    console.log(this.state.share, this.state.showModal);
   };
 
   saveBook = ( p, s )=> {
     API.saveUserBook(
       this.state.user, p.googleID,
       {
-      googleID: p.googleID,
-      imageURL: p.image,
-      title: p.title,
-      author: p.author,
-      description: p.description,
-      rating: s
+        googleID: p.googleID,
+        imageURL: p.image,
+        previewURL: p.link,
+        title: p.title,
+        author: p.author,
+        description: p.description,
+        rating: s
     })
       .then(res => this.loadBooks())
       .catch(err => console.log(err));
@@ -117,6 +119,7 @@ class Search extends Component {
 
 
   render() {
+
     return (
       <>
         <SmallJumbotron>
@@ -134,7 +137,7 @@ class Search extends Component {
                   text="Preview available"
                   name="filter"
                   value="partial"
-                  checked={this.state.filter === 'partial'}
+                  checked={this.state.filter === "partial"}
                   onChange={this.handleInputChange}
                 >
                 </CheckBox>
@@ -142,7 +145,7 @@ class Search extends Component {
                   id="free-ebooks"
                   text="Free eBook available"
                   name="filter"
-                  checked={this.state.filter === 'free-ebooks'}
+                  checked={this.state.filter === "free-ebooks"}
                   value="free-ebooks"
                   onChange={this.handleInputChange}
                 >
@@ -151,7 +154,7 @@ class Search extends Component {
                   id="paid-ebooks"
                   text="eBook available for purchase"
                   name="filter"
-                  checked={this.state.filter === 'paid-ebooks'}
+                  checked={this.state.filter === "paid-ebooks"}
                   value="paid-ebooks"
                   onChange={this.handleInputChange}                >
                 </CheckBox>
@@ -166,7 +169,7 @@ class Search extends Component {
                 Search
               </FormBtn>
               <FormBtn
-                disabled={!(this.state.search)}
+                disabled={(!(this.state.search) && (this.state.filter === ""))}
                 onClick={this.reset}
                 className="btn btn-danger my-2 my-sm-0"
                 style={{display:"inline"}}
@@ -192,16 +195,16 @@ class Search extends Component {
           </div>
           {
             this.state.showModal ? 
-            <Modal>
-              <div>
-                <h1>Hi, this is the modal</h1>
-                <h3>Share {this.state.share.title}</h3>
-              </div>
-            </Modal>
+            <GenModal>
+              <MessageModal
+                share={this.state.share}
+              >
+                <Button variant="outline-danger" onClick={this.toggleModal}>X</Button> 
+              </MessageModal>
+            </GenModal>
             :
             null
           }
-          {/* <MessageModal share={this.state.share}></MessageModal> */}
           <div>
             {!this.state.results.length ? (              
                 <h3 className="results-message">No results to display</h3>

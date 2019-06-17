@@ -16,4 +16,8 @@ router
   .route("/users")
   .post(booksController.createUser); 
 
+router
+  .route("/messages")
+  .post(booksController.sendSMS);   
+
 module.exports = router;

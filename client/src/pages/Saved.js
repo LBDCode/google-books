@@ -1,6 +1,12 @@
 import React, { Component } from "react";
 import { DeleteBtn } from "../components/DeleteBtn";
 import API from "../utils/API";
+import { GenModal, MessageModal } from "../components/Message";
+import Row from 'react-bootstrap/Row'
+import Col from 'react-bootstrap/Col'
+import Modal from "react-bootstrap/Modal";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
 import Jumbotron from "../components/Jumbotron";
 import { Link } from "react-router-dom";
 import { List, ListItem } from "../components/List";
@@ -21,6 +27,12 @@ class Saved extends Component {
         books: [],
         user: "guest@guest.com",
         userName: "Guest",
+        showModal: false,
+        share: {
+          title: "",
+          author: "",
+          link: ""
+        },
         columnDefs: [{
           headerName: "Cover", field: "imageURL", cellRenderer: this.renderCover,  autoHeight: true, width: 100
         }, {
@@ -30,7 +42,7 @@ class Saved extends Component {
         }, {
           headerName: "Rating", field: "rating", sortable: true, filter: true, resizable: true, cellRendererFramework: this.renderStars 
         }, {
-          headerName: "Update", field: "googleID",  resizable: true, cellRendererFramework: this.renderButtons 
+          headerName: "", field: "googleID",  resizable: true, cellRendererFramework: this.renderButtons 
         }
         ],
       }
@@ -39,10 +51,6 @@ class Saved extends Component {
   
     componentDidMount() {
       this.loadBooks();
-    };
-
-    componentDidUpdate() {
-      console.log("updated");
     };
   
     loadBooks = () => {
@@ -65,6 +73,22 @@ class Saved extends Component {
       }
     };
 
+    onModalClick= (p) => {
+      console.log(p);
+      var share = {...share};
+      share = {
+        title: p.data.title,
+        author: p.data.author,
+        link: p.data.previewURL
+      };
+      this.setState( { share: share });
+      this.toggleModal()
+    };
+  
+    toggleModal = () => {
+      this.setState( { showModal: !this.state.showModal })
+      console.log(this.state.share, this.state.showModal);
+    };
     
     renderTitleLink = params => {
       if (params.value) {
@@ -92,18 +116,15 @@ class Saved extends Component {
 
     renderButtons = params => {
       if (params.value) {
-        const edit = <p ><a className="edit" href={"/books/" + params.value}> edit </a></p>;
-        const del = <p className="delete" onClick={() => this.deleteBook(params.value)}> delete </p>;
-        return <div className="actions"> {edit} {del} </div>;
+        const edit = <a className="edit" href={"/books/" + params.value}> <i class="far fa-edit"></i> </a>;
+        const del = <i className="far fa-trash-alt delete" onClick={() => this.deleteBook(params.value)}></i>;
+        const share = <i className="fas fa-share-alt share-icon"  onClick={() => this.onModalClick(params)}></i>
+        return <div className="actions"> {edit} {del} {share}</div>;
       } else {
         return null;
       }
     };
 
-    handleClick = props => {
-      console.log("clicked: "+ props);
-    };
-  
     deleteBook = id => {
       API.deleteBook(this.state.user, id)
         .then(res => this.loadBooks())
@@ -119,6 +140,7 @@ class Saved extends Component {
       }
     };
 
+    //resize and define columns for ag-grid based on window size
     onGridSizeChanged = params => {
       // get the current grids width
       var gridWidth = document.getElementById("grid-wrapper").offsetWidth;
@@ -149,8 +171,20 @@ class Saved extends Component {
 
       var searchMessage = '<div style="pointer-events: auto;">It looks like your reading list is empty!';
       searchMessage += ' Use our <a href="/search">Search</a> feature to add some books.';
+
       return (
         <div className="container" id="grid-wrapper" style={{height: "87vh", padding: "0", maxWidth: "100%"}}>
+          { this.state.showModal ? 
+            <GenModal>
+              <MessageModal
+                share={this.state.share}
+              >
+                <Button variant="outline-danger" onClick={this.toggleModal}>X</Button> 
+              </MessageModal>
+            </GenModal>
+            :
+            null
+          }
           <div 
             className="ag-theme-balham"
             style={{ 

@@ -32,7 +32,11 @@ export default {
   },
   //creates a user - working
   createUser: function(userData) {
-    console.log(userData);
     return axios.post("/api/books/users", userData)
+  },
+  //send a text
+  sendText: function(number, bookInfo) {
+    console.log(number, bookInfo);
+    return axios.post("/api/books/messages", {number: number, bookInfo: bookInfo});
   }
 };
