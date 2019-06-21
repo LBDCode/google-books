@@ -45,7 +45,7 @@ class Search extends Component {
     API.searchBooks(this.state.search, this.state.filter)
       .then(res => {
         this.filterResults();
-        this.setState({results: res.data.items});
+        this.setState({results: res.data.results});
       })
       .catch(err => console.log(err))
   };

@@ -18,7 +18,11 @@ router
 
 router
   .route("/messages")
-  .post(booksController.sendSMS);   
+  .post(booksController.sendSMS);
+
+router
+  .route("/search")
+  .post(booksController.searchBooks); 
   
 router
   .route("/emails")

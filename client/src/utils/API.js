@@ -6,16 +6,16 @@ export default {
   getUserBooks: function(email) {
     return axios.get("/api/books/users/" + email);
   },
-  //search for books - working
   searchBooks: function(q, f) {
     const apiURL = "https://www.googleapis.com/books/v1/volumes?";
-    const apiKey = "&key=AIzaSyALT3IQvbkQs5TifbVM8LfyjCKQIgpA9Ns";
     const query = "q=" + q;
     const filter = "&filter=" + f;
     if (f === ""|| f === "none") {
-      return axios.get(apiURL + query + apiKey);
+      const midstring = apiURL + query; 
+      return axios.post("api/books/search", {search: midstring});
     } else {
-      return axios.get(apiURL + query + filter + apiKey);
+      const midstring = apiURL + query + filter;
+      return axios.post("api/books/search", {search: midstring});
     }
   },
   // Gets the book with the given id

@@ -1,10 +1,19 @@
 const db = require("../models");
+const axios= require("axios")
 const Nexmo = require("nexmo");
 const nodemailer = require("nodemailer");
 const config = require("../config");
 
 // Defining methods for the booksController
 module.exports = {
+  //find books
+  searchBooks: function(req, res) {
+    axios.get(req.body.search + config.Config.googleKey)
+    .then(results => {
+      res.json({results: results.data.items})      
+    })
+    .catch(err => res.status(422).json(err));  
+  },
   //return all info for a user
   findAll: function(req, res) {
     db.Schema.User.findOne({ email: req.params.email })
@@ -113,7 +122,6 @@ module.exports = {
   },
   sendEmail: function(req, res) {
     let email = req.body.email.trim();
-    let text = req.body.text.trim();
     const transporter = nodemailer.createTransport({
       host: config.Config.nodemailerHost,
       port: 465,
@@ -134,7 +142,6 @@ module.exports = {
       if (error) {
         console.log(error);
       } else {
-        console.log("Email sent: " + info.response);
         res.json(info.response);
       }
     });

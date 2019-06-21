@@ -9,6 +9,7 @@ module.exports.Config = {
   nexmoPrivate: process.env.PRIVATE_KEY,
   nodemailerHost: process.env.NODEMAILER_HOST,
   nodemailerUser: process.env.NODEMAILER_USER,
-  nodemailerPW: process.env.NODEMAILER_PASSWORD
+  nodemailerPW: process.env.NODEMAILER_PASSWORD,
+  googleKey: process.env.GOOGLE_APIKEY
 };
 
