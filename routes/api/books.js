@@ -19,5 +19,9 @@ router
 router
   .route("/messages")
   .post(booksController.sendSMS);   
+  
+router
+  .route("/emails")
+  .post(booksController.sendEmail);   
 
 module.exports = router;

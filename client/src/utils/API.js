@@ -28,6 +28,7 @@ export default {
   },
   // Saves a book to the user - working
   saveUserBook: function(user, bookID, bookData) {
+    console.log(user, bookID, bookData);
     return axios.put("/api/books/user/" + user + "/" + bookID, {"email": user, "bookData": bookData});
   },
   //creates a user - working
@@ -35,8 +36,12 @@ export default {
     return axios.post("/api/books/users", userData)
   },
   //send a text
-  sendText: function(number, bookInfo) {
-    console.log(number, bookInfo);
-    return axios.post("/api/books/messages", {number: number, bookInfo: bookInfo});
+  sendText: function(user, number, bookInfo) {
+    let message = `Check out this book!  ${bookInfo.title} by ${bookInfo.author}. --${user} via Bibliofile \n ${bookInfo.link}`
+    return axios.post("/api/books/messages", {user: user, number: number, message: message});
+  },
+  sendEmail: function(user, email, bookInfo) {
+    let text = `Bibiofile user ${user} found a book you might like! ${bookInfo.title} by ${bookInfo.author} \n ${bookInfo.link} `;
+    return axios.post("/api/books/emails", {user: user, email: email, text: text});
   }
 };

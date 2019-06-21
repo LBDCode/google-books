@@ -56,7 +56,7 @@ class Home extends Component {
               <Col size="12">
                 <blockquote className="blockquote text-center home-about">
                   <p className="mb-0">Read. Read anything. Read the things they say are good for you, 
-                  and the things they claim are junk. You’ll find what you need to find. Just read </p>
+                  and the things they claim are junk. You’ll find what you need to find. Just read. </p>
                   <footer className="blockquote-footer">Neil Gaiman</footer>
                 </blockquote>
               </Col>           

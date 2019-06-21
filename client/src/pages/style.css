@@ -78,6 +78,11 @@
     cursor: pointer;
 }
 
+.search-directions{
+    max-width: 800px;
+    margin: 0 auto;
+}
+
 .ag-header-cell-label {
     justify-content: center;
 }

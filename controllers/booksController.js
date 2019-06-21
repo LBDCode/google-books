@@ -1,4 +1,7 @@
 const db = require("../models");
+const Nexmo = require("nexmo");
+const nodemailer = require("nodemailer");
+const config = require("../config");
 
 // Defining methods for the booksController
 module.exports = {
@@ -22,30 +25,47 @@ module.exports = {
   },
   //create a new user
   createUser: function(req, res) {
-    console.log(req.body);
     db.Schema.User.create(req.body)
       .then(dbModel => res.json(dbModel))
       .catch(err => res.status(422).json(err));
   },
+
+  googleID: {type: String, required: true},
+  imageURL: String,
+  previewURL: String,
+  title: { type: String, required: true },
+  author: { type: String, required: true },
+  description: String,
+  date: { type: Date, default: Date.now },
+  rating: {
+    type: Number,
+    min: 0,
+    max: 5
+  },
   //add/remove favorites for a user
   manageUserBook: function(req, res) {
-    console.log(req.body.email, req.body.book);
     db.Schema.User.findOne(
       {"email": req.params.email, "favorites.googleID": req.params.book }
     ).then(found => {
       if (found) {
-        console.log("found: " + req.params.book);
         db.Schema.User.update(
-          { "email": email, "favorites.googleID": book },
-          { $set: { favorites: {googleID: book}}}
+          { "email": req.body.email, "favorites.googleID": req.params.book },
+          { $set: { "favorites.$": 
+            {"googleID": req.body.bookData.googleID, 
+            rating: req.body.bookData.rating,
+            imageURL: req.body.bookData.imageURL,
+            previewURL: req.body.bookData.previewURL,
+            title: req.body.bookData.title,
+            author: req.body.bookData.author,
+            description: req.body.bookData.description             
+            }
+        }}
         )
           .then(dbModel => {
             res.json(dbModel);
-            console.log("removed: " + dbModel);
           })
           .catch(err => res.status(422).json(err));
       } else {
-        console.log("update: " + req.params.book);
         db.Schema.User.findOneAndUpdate(
           { email: req.body.email },
           { $addToSet: { favorites: req.body.bookData} }
@@ -74,7 +94,49 @@ module.exports = {
       .catch(err => res.status(422).json(err));
   },
   sendSMS: function(req, res) {
+    const nexmo = new Nexmo({
+      apiKey: config.Config.nexmoKey,
+      apiSecret: config.Config.nexmoSecret
+    });
+
     res.send(req.body)
-    console.log(req.body);
-  }
+    // const user = req.body.user;
+    const number = "1" + req.body.number;
+    const message = req.body.message;
+
+    nexmo.message.sendSms(config.Config.nexmoNumber, number, message, {type: 'unicode'},
+    (err, resp) => {
+      if (err) {
+        console.log(err);
+      } 
+    });
+  },
+  sendEmail: function(req, res) {
+    let email = req.body.email.trim();
+    let text = req.body.text.trim();
+    const transporter = nodemailer.createTransport({
+      host: config.Config.nodemailerHost,
+      port: 465,
+      secure: true,
+      auth: {
+        user: config.Config.nodemailerUser,
+        pass: config.Config.nodemailerPW
+      }
+    });
+    let mailOptions = {
+      from: config.Config.nodemailerUser,
+      to: email,
+      subject: "Someone shared a book with you!",
+      text: req.body.text.trim()
+    };
+
+    transporter.sendMail(mailOptions, function(error, info) {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log("Email sent: " + info.response);
+        res.json(info.response);
+      }
+    });
+  },
 };

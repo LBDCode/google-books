@@ -1,9 +1,8 @@
 const express = require("express");
-const Nexmo = require("nexmo");
-// const socket.io = require("socket.io");
 const mongoose = require("mongoose");
 const routes = require("./routes");
 const app = express();
+require('dotenv').config({path: __dirname + '/.env'})
 const PORT = process.env.PORT || 3001;
 
 // Define middleware here
@@ -22,6 +21,10 @@ mongoose.connect(
 );
 
 // Start the API server
-server = app.listen(PORT, function() {
+const server = require('http').createServer(app);
+
+server.listen(PORT, function() {
   console.log(`🌎  ==> API Server now listening on PORT ${PORT}!`);
 });
+
+

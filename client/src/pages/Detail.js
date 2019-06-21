@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import {browserHistory} from "react-router";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
 import { GenModal, MessageModal } from "../components/Message";
 import { Container } from "../components/Grid";
 import StarRatingComponent from 'react-star-rating-component';
@@ -16,14 +14,15 @@ class Detail extends Component {
     user: "guest@guest.com",
     userName: "Guest",
     book: {},
-    sharePhone: '',
-    shareEmail: '',
-    // share: {
-    //   title: "",
-    //   author: "",
-    //   link: ""
-    // }
+    rating: '',
+    share: {
+      title: "",
+      author: "",
+      link: "",
+      imgLink: ""
+    }
   };
+
 
   componentDidMount() {
     this.loadBook();
@@ -42,24 +41,22 @@ class Detail extends Component {
   onStarClick(nextValue, prevValue, name) {
     var book = {...this.state.book};
     book.rating = nextValue
-    console.log(book);
     this.setState({ book });
   };
 
   saveBook = ( p, s )=> {
-    console.log(p, s);
     API.saveUserBook(
-      this.state.user, p.googleID,
+      this.state.user, this.state.book.googleID,
       {
-      googleID: p.googleID,
-      imageURL: p.image,
-      previewURL: p.link,
-      title: p.title,
-      author: p.author,
-      description: p.description,
-      rating: s
+      googleID: this.state.book.googleID,
+      imageURL: this.state.book.imageURL,
+      previewURL: this.state.book.previewURL,
+      title: this.state.book.title,
+      author: this.state.book.author,
+      description: this.state.book.description,
+      rating: this.state.book.rating
     })
-      .then(res => this.loadBooks())
+      .then(res => this.loadBook())
       .catch(err => console.log(err));
   };
 
@@ -68,7 +65,8 @@ class Detail extends Component {
     share = {
       title: p.title,
       author: p.author,
-      link: p.link
+      link: p.previewURL,
+      imgLink: p.imageURL
     };
     this.setState( { share: share });
     this.toggleModal()
@@ -76,8 +74,12 @@ class Detail extends Component {
 
   toggleModal = () => {
     this.setState( { showModal: !this.state.showModal })
-    console.log(this.state.share, this.state.showModal);
   };
+
+  clickAway = (e) => {
+    if (this.modalNode && this.modalNode.contains(e.target)) return;
+    this.toggleModal();
+  }
 
   deleteBook = p => {
     API.deleteBook(this.state.user, p.googleID)
@@ -91,11 +93,15 @@ class Detail extends Component {
       <Container  fluid>
         {
           this.state.showModal ? 
-          <GenModal>
+          <GenModal
+            clickAway={this.clickAway}
+            modalRef={n => this.modalNode = n}  
+          >
             <MessageModal
-              share={this.state.book}
+              share={this.state.share}
+              user={this.state.userName}
             >
-              <Button variant="outline-danger" onClick={this.toggleModal}>X</Button> 
+              <Button variant="outline-light" className="btn-dismiss" onClick={this.toggleModal}>X</Button> 
             </MessageModal>
           </GenModal>
           :
@@ -120,7 +126,7 @@ class Detail extends Component {
               />            
               <div style={{marginTop: '10px;'}}>
                 <span>
-                  <button className="btn btn-custom btn-sm" onClick={()=>this.saveBook(this.state.book, this.state.rating)}>Save</button>
+                  <button className="btn btn-custom btn-sm" onClick={this.saveBook}>Save</button>
                   <button className="btn btn-delete btn-sm" onClick={() => this.deleteBook(this.state.book)}>Delete</button>
                 </span>
               </div>

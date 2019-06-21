@@ -1,16 +1,7 @@
 import React, { Component } from "react";
-import { DeleteBtn } from "../components/DeleteBtn";
 import API from "../utils/API";
 import { GenModal, MessageModal } from "../components/Message";
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
-import Form from "react-bootstrap/Form";
-import Jumbotron from "../components/Jumbotron";
-import { Link } from "react-router-dom";
-import { List, ListItem } from "../components/List";
-import { FormBtn } from "../components/Form";
 import StarRatingComponent from 'react-star-rating-component';
 import { AgGridReact } from 'ag-grid-react';
 import 'ag-grid-community/dist/styles/ag-grid.css';
@@ -31,7 +22,8 @@ class Saved extends Component {
         share: {
           title: "",
           author: "",
-          link: ""
+          link: "",
+          imgLink: ""
         },
         columnDefs: [{
           headerName: "Cover", field: "imageURL", cellRenderer: this.renderCover,  autoHeight: true, width: 100
@@ -74,20 +66,25 @@ class Saved extends Component {
     };
 
     onModalClick= (p) => {
-      console.log(p);
-      var share = {...share};
+      let share = {...share};
       share = {
         title: p.data.title,
         author: p.data.author,
-        link: p.data.previewURL
+        link: p.data.previewURL,
+        imgLink: p.data.imageURL
       };
       this.setState( { share: share });
       this.toggleModal()
     };
+
+    clickAway = (e) => {
+      if (this.modalNode && this.modalNode.contains(e.target)) return;
+      this.toggleModal();
+    }
+  
   
     toggleModal = () => {
       this.setState( { showModal: !this.state.showModal })
-      console.log(this.state.share, this.state.showModal);
     };
     
     renderTitleLink = params => {
@@ -116,7 +113,7 @@ class Saved extends Component {
 
     renderButtons = params => {
       if (params.value) {
-        const edit = <a className="edit" href={"/books/" + params.value}> <i class="far fa-edit"></i> </a>;
+        const edit = <a className="edit" href={"/books/" + params.value}> <i className="far fa-edit"></i> </a>;
         const del = <i className="far fa-trash-alt delete" onClick={() => this.deleteBook(params.value)}></i>;
         const share = <i className="fas fa-share-alt share-icon"  onClick={() => this.onModalClick(params)}></i>
         return <div className="actions"> {edit} {del} {share}</div>;
@@ -175,11 +172,15 @@ class Saved extends Component {
       return (
         <div className="container" id="grid-wrapper" style={{height: "87vh", padding: "0", maxWidth: "100%"}}>
           { this.state.showModal ? 
-            <GenModal>
+            <GenModal
+              clickAway={this.clickAway}
+              modalRef={n => this.modalNode = n}  
+            >
               <MessageModal
                 share={this.state.share}
+                user={this.state.userName}
               >
-                <Button variant="outline-danger" onClick={this.toggleModal}>X</Button> 
+                <Button variant="outline-light" className="btn-dismiss" onClick={this.toggleModal}>X</Button> 
               </MessageModal>
             </GenModal>
             :

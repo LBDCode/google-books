@@ -8,24 +8,136 @@
     transform: translateZ(0);
     background-color: rgba(34, 34, 34, 0.438);
 }
+
+.btn-dismiss {
+    border: none;
+}
   
 .custom-modal {
-
     margin: 30px auto 0 auto;
-    width: 50%;
-    /* height: 50%; */
-    padding: 2.5em 1.5em 1.5em 1.5em;
+    max-width: 600px;
     background-color: #FFFFFF;
     box-shadow: 0 0 10px 3px rgba(0, 0, 0, 0.1);
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    background: linear-gradient( rgba(0, 0, 0, 0.5), #212529 ), url('./reading.png');
+}
 
-    @media screen and (min-width: 500px) {
-        left: 50%;
-        top: 50%;
-        height: auto;
-        transform: translate(-50%, -50%);
-        max-width: 30em;
-        max-height: calc(100% - 1em);
+
+.message-body {
+    padding-left: 1.1rem;
+    padding-right: 1.1rem;
+    padding-bottom: 1rem;
+}
+
+.message-image {
+    width: 80px;
+}
+
+.message-form {
+    padding: 20px 0;
+    margin: 0 auto;
+    max-width: 480px;
+    align-content: center;
+}
+
+.send-message {
+    margin-top: 10px;
+    color: #dc3545;
+    text-align: center;
+    font-size: 14px;
+}
+
+.modal-title {
+    font-size: 30px;
+    margin-right: 10px;
+    color: #fff;
+    text-align: center;
+}
+
+.message-book{
+    align-items: center; /* align vertical */
+    text-align: center;
+    margin: 20px;
+    color: #ffd307e6;
+}
+
+.mobile-share {
+    display:none;
+}
+
+
+@media only screen and (max-width: 650px) {
+    .custom-modal { 
+        width: 95%;
+    }
+
+    .message-body {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .message-image {
+        margin: 0 auto;
+        align-items: center; /* align vertical */
+        margin-bottom: 10px;
+    }
+
+    .message-book {
+        display: flex;
+        align-items: center; /* align vertical */
+        justify-content: center;
+        text-align: center;
+    }
+   
+    .message-form{
+        margin-top: 0;
+        margin-left: 5px;
+        margin-right: 10px
+    } 
+
+    .modal-title {
+        font-size: 24px;
+        margin-right: 10px;
+    }
+
+}
+
+@media only screen and (max-width: 470px) {
+    .message-body {
+        padding-left: 3rem;
+        padding-right: 3rem;
+        width: 100%
+    }
+
+    .message-book {
+        margin: 5px;        
+    }
+
+    .modal-title {
+        font-size: 18px;
+        margin-right: 10px;
+    }
+
+    .message-image {
+        width: 60px;
+        height: 90px;
+    }
+
+    .message-form{
+        margin-top: 0;
+        margin-left: 0px;
+        margin-right: 0px
+    }
+
+    .mobile-share {
+        display: inherit;
+    }
+
+    .reg-share {
+        display: none;
     }
 }

@@ -1,7 +1,4 @@
 import React, { Component } from "react";
-import Row from 'react-bootstrap/Row'
-import Col from 'react-bootstrap/Col'
-import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import API from "../utils/API";
@@ -25,7 +22,8 @@ class Search extends Component {
       share: {
         title: "",
         author: "",
-        link: ""
+        link: "",
+        imgLink: ""
       }
     };
 
@@ -81,15 +79,21 @@ class Search extends Component {
   };
 
   onModalClick= (p) => {
-    var share = {...share};
+    let share = {...this.state.share};
     share = {
       title: p.title,
       author: p.author[0],
-      link: p.link
+      link: p.link, 
+      imgLink: p.image
     };
     this.setState( { share: share })
     this.toggleModal()
   };
+
+  clickAway = (e) => {
+    if (this.modalNode && this.modalNode.contains(e.target)) return;
+    this.toggleModal();
+  }
 
   toggleModal = () => {
     this.setState( { showModal: !this.state.showModal })
@@ -124,7 +128,7 @@ class Search extends Component {
       <>
         <SmallJumbotron>
           <h3 style={{color:"#fff", fontSize: "1.95rem"}}>Book Search</h3>
-          <form >
+          <Form >
               <Input 
                 value={this.state.search}
                 onChange={this.handleInputChange}
@@ -164,7 +168,7 @@ class Search extends Component {
                 disabled={!(this.state.search)}
                 onClick={this.searchBooks}
                 className="btn btn-success my-2 my-sm-0"
-                style={{display:"inline"}}
+                style={{display:"inline", marginRight: "5px"}}
               >
                 Search
               </FormBtn>
@@ -172,16 +176,16 @@ class Search extends Component {
                 disabled={(!(this.state.search) && (this.state.filter === ""))}
                 onClick={this.reset}
                 className="btn btn-danger my-2 my-sm-0"
-                style={{display:"inline"}}
+                style={{display:"inline", marginRight: "5px"}}
               >
                Reset
               </FormBtn>
             </div>
-          </form>
+          </Form>
         </SmallJumbotron>
 
         <div className="container">
-          <div>
+          <div className="search-directions">
             <Collapse
               header="How to use the GoogleBooks API to find new, exciting literature."
             >
@@ -195,11 +199,15 @@ class Search extends Component {
           </div>
           {
             this.state.showModal ? 
-            <GenModal>
+            <GenModal 
+              clickAway={this.clickAway}
+              modalRef={n => this.modalNode = n}  
+            >
               <MessageModal
                 share={this.state.share}
+                user={this.state.userName}                
               >
-                <Button variant="outline-danger" onClick={this.toggleModal}>X</Button> 
+                <Button variant="outline-light" className="btn-dismiss" onClick={this.toggleModal}>X</Button> 
               </MessageModal>
             </GenModal>
             :
