@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Link } from "react-router-dom";
 import API from "../../utils/API";
 import { Navbar, NavListRight, NavListItem } from "../NavElems"
 import { Modal, ModalTabList } from "../Login";
@@ -11,8 +12,8 @@ class Nav extends Component {
     super(props);
  
     this.state = {
-      user: "",
-      useName: "",
+      user: "guest@guest.com",
+      userName: "Guest",
       loginEmail: "",
       loginPassword: "",
       signupEmail: "",
@@ -50,19 +51,18 @@ class Nav extends Component {
             <a href="/" className="navbar-brand cust-text d-block order-0 order-md-1 ">Bibliofile</a>
           </div>
 
-          
           <NavListRight>
             <NavListItem>
-              <a className="nav-link cust-link" href="/search">search</a>
+              <Link to={"/search"} className="nav-link cust-link" href="/search">search</Link>
             </NavListItem>
             <NavListItem>
-              <a className="nav-link cust-link" href="/saved">library</a>
+              <Link to={"/saved"}className="nav-link cust-link" href="/saved">library</Link>
             </NavListItem>
             <NavListItem>
-              {this.state.user === "" ? 
-                <a className="nav-link cust-link" href="#" data-toggle="modal" data-target="#loginModal">sign in</a>
+              {this.state.user === "Guest" ? 
+                <Link className="nav-link cust-link" href="#" data-toggle="modal" data-target="#loginModal">sign in</Link>
               :
-                <a className="nav-link cust-link" href="#" data-toggle="modal" data-target="#loginModal">sign out</a>
+                <Link className="nav-link cust-link" href="#" data-toggle="modal" data-target="#loginModal">sign out</Link>
               }
             </NavListItem>
           </NavListRight>
