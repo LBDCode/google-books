@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import API from "../utils/API";
+import Fire from "../config/Firebase";
 import { List, CardItem } from "../components/List";
 import {SmallJumbotron }from "../components/Jumbotron";
 import { Input, FormBtn, CheckBox, CheckboxDiv, Collapse } from "../components/Form";
@@ -29,13 +30,27 @@ class Search extends Component {
 
  
   componentDidMount() {
-    this.loadBooks();
-  }
+    Fire.auth().onAuthStateChanged(user => {
+      if (user && !Fire.auth().currentUser.isAnonymous) {
+        this.setState({
+          user: user.email
+        });
+      } else if (!user || Fire.auth().currentUser.isAnonymous || user === null) {
+        this.setState({
+          user: "guest@guest.com"
+        })
+      }
+      this.loadBooks()
+    })
+  };
 
   loadBooks = () => {
     API.getUserBooks(this.state.user)
       .then(res => {
-        this.setState({ books: res.data.favorites });
+        this.setState({ 
+          userName: res.data.userName,
+          books: res.data.favorites 
+        });
       })
       .catch(err => console.log(err));  
   };

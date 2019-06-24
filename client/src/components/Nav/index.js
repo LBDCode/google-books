@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
+import {browserHistory} from "react-router";
+import Fire from "../../config/Firebase";
 import API from "../../utils/API";
 import { Navbar, NavListRight, NavListItem } from "../NavElems"
 import { Modal, ModalTabList } from "../Login";
 import { LoginInput, FormBtn } from "../Form";
 import "./style.css";
+import fire from '../../config/Firebase';
 
 
 class Nav extends Component {
@@ -12,8 +15,8 @@ class Nav extends Component {
     super(props);
  
     this.state = {
-      user: "guest@guest.com",
-      userName: "Guest",
+      user: null,
+      userName: "",
       loginEmail: "",
       loginPassword: "",
       signupEmail: "",
@@ -21,6 +24,38 @@ class Nav extends Component {
       signupName: ""
     };
   };
+
+
+  componentDidMount() {
+    this.authListener();
+
+  };
+
+  authListener() {
+    Fire.auth().onIdTokenChanged(user => {
+      if (user && !Fire.auth().currentUser.isAnonymous) {
+        this.setState({
+          user: user.email
+        });
+        this.setUserName();
+      } else if (!user || Fire.auth().currentUser.isAnonymous) {
+        this.setState({
+          user: "guest@guest.com",
+          userName: "Guest"
+        });
+      }
+    });  
+  };
+
+  setUserName = ()=> {
+    API.getUserBooks(this.state.user)
+    .then(res => {
+      this.setState({
+        userName: res.data.userName,
+      })
+    })
+    .catch(err => console.log(err)); 
+  }
 
   handleInputChange = event => {
     const { name, value } = event.target;
@@ -30,13 +65,70 @@ class Nav extends Component {
     
   };
 
+  handleSignOut = event => {
+    event.preventDefault();
+    Fire.auth()
+      .signOut()
+      .then(res => {
+        this.setState({
+          user: "guest@guest.com",
+          userName: "Guest"
+        })
+      })
+      .catch(error => {
+        console.log(error)
+      });
+    this.handleRedirect(event);
+  };
+
+  handleLogin = event => {
+    event.preventDefault();
+    Fire.auth()
+      .signInWithEmailAndPassword(this.state.loginEmail, this.state.loginPassword)
+      .then(this.setState({ 
+        user: this.state.loginEmail,
+      }))
+      .then(this.setUserName())
+      .catch(error => {
+        this.setState({ logInError: error.message });
+      });
+  };
+
+  handleGuest = event => {
+    event.preventDefault();
+    Fire.auth()
+      .signInAnonymously()
+      .then()
+      .catch(error => {
+        this.setState({ logInError: error.message });
+      });
+  };
+
+  handleSignUp = e => {
+    e.preventDefault();
+    Fire.auth()
+      .createUserWithEmailAndPassword(this.state.signupEmail, this.state.signupPassword)
+      .then(res =>{
+        this.newUser()
+      })
+      .catch(error => {
+        console.log(error)
+        // this.setState({ signUpError: error.message });
+      });
+  };
+
+  handleRedirect = () => {
+      this.props.history.push('/');
+  }
+
   newUser = (email, userName) => {
-    const newUser = {"email": email, "userName": userName};
+    const newUser = {"email": this.state.signupEmail, "userName": this.state.signupName};
     console.log(newUser);
     API.createUser(newUser)
-      .then(res =>
-        this.setState({user: email, userName: userName})
-      )
+      .then(res => {
+        console.log(res);
+        this.setState({user: this.state.signupEmail, userName: this.state.signupName})
+      })
       .catch(err => console.log(err));  
   };
 
@@ -48,7 +140,7 @@ class Nav extends Component {
           </button>
 
           <div className="navbar-collapse collapse dual-nav  order-1 order-md-0">
-            <a href="/" className="navbar-brand cust-text d-block order-0 order-md-1 ">Bibliofile</a>
+            <Link to={"/"} href="/" className="navbar-brand cust-text d-block order-0 order-md-1 ">Bibliofile</Link>
           </div>
 
           <NavListRight>
@@ -59,10 +151,10 @@ class Nav extends Component {
               <Link to={"/saved"}className="nav-link cust-link" href="/saved">library</Link>
             </NavListItem>
             <NavListItem>
-              {this.state.user === "Guest" ? 
-                <Link className="nav-link cust-link" href="#" data-toggle="modal" data-target="#loginModal">sign in</Link>
+              {(this.state.user === null || this.state.user === "guest@guest.com") ? 
+                <Link className="nav-link cust-link" data-toggle="modal" data-target="#loginModal">sign in</Link>
               :
-                <Link className="nav-link cust-link" href="#" data-toggle="modal" data-target="#loginModal">sign out</Link>
+                <Link to="" className="nav-link cust-link" onClick={this.handleSignOut} >sign out</Link>
               }
             </NavListItem>
           </NavListRight>
@@ -101,7 +193,7 @@ class Nav extends Component {
                       value={this.state.loginPassword}
                       onChange={this.handleInputChange}
                     />
-                    <FormBtn type="button" className="btn btn-primary" id="loginBtn" onClick={() => this.newUser(this.state.loginEmail, this.state.signupName)}>Login</FormBtn>
+                    <FormBtn type="button" className="btn btn-primary" id="loginBtn" onClick={this.handleLogin}>Login</FormBtn>
                     <FormBtn type="button" className="btn btn-secondary" id="guestBtn" data-dismiss="modal">Continue as Guest</FormBtn>
                   </form>
                 </div>
@@ -130,7 +222,7 @@ class Nav extends Component {
                         value={this.state.signupPassword}
                         onChange={this.handleInputChange}
                       />
-                    <FormBtn type="button" className="btn btn-primary" id="loginBtn" onClick={() => this.newUser(this.state.signupEmail, this.state.signupName)}>Login</FormBtn>
+                    <FormBtn type="button" className="btn btn-primary" id="signupBtn" onClick={this.handleSignUp}>Signup</FormBtn>
                     <FormBtn type="button" className="btn btn-secondary" id="guestBtn" data-dismiss="modal">Continue as Guest</FormBtn>
                   </form>
                 </div>

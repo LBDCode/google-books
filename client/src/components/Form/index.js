@@ -15,7 +15,7 @@ export function Input(props) {
 export function LoginInput(props) {
   return (
     <div className="form-group">
-      <label for={props.id}>{props.placeholder}</label>
+      <label htmlFor={props.id}>{props.placeholder}</label>
       <input {...props} className="form-control"/>
     </div>
   );

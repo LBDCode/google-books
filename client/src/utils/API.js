@@ -28,7 +28,6 @@ export default {
   },
   // Saves a book to the user - working
   saveUserBook: function(user, bookID, bookData) {
-    console.log(user, bookID, bookData);
     return axios.put("/api/books/user/" + user + "/" + bookID, {"email": user, "bookData": bookData});
   },
   //creates a user - working

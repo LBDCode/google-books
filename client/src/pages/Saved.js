@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import API from "../utils/API";
+import Fire from "../config/Firebase";
+import { Link, BrowserRouter } from "react-router-dom";
 import { GenModal, MessageModal } from "../components/Message";
 import Button from "react-bootstrap/Button";
 import StarRatingComponent from 'react-star-rating-component';
@@ -16,8 +18,8 @@ class Saved extends Component {
       
       this.state = {        
         books: [],
-        user: "guest@guest.com",
-        userName: "Guest",
+        user: null,
+        userName: "",
         showModal: false,
         share: {
           title: "",
@@ -40,18 +42,33 @@ class Saved extends Component {
       }
 
     }
-  
+
     componentDidMount() {
-      this.loadBooks();
+      Fire.auth().onAuthStateChanged(user => {
+        if (user && !Fire.auth().currentUser.isAnonymous) {
+          this.setState({
+            user: user.email
+          });
+        } else if (!user || Fire.auth().currentUser.isAnonymous || user === null) {
+          this.setState({
+            user: "guest@guest.com"
+          })
+        }
+        this.loadBooks()
+      })
     };
   
+
+    
     loadBooks = () => {
       API.getUserBooks(this.state.user)
         .then(res => {
-          this.setState({ rowData: res.data.favorites });
-          this.setState({ books: res.data.favorites})
-        }
-        )
+          this.setState({
+            userName: res.data.userName,
+            rowData: res.data.favorites,
+            books: res.data.favorites
+          })
+        })
         .catch(err => console.log(err));  
     };
 
@@ -89,7 +106,8 @@ class Saved extends Component {
     
     renderTitleLink = params => {
       if (params.value) {
-        const link = <a href={"/books/" + params.data.googleID}>
+        const bookLink = "/books/" + params.data.googleID;
+        const link = <a href="#" onClick={() => this.props.history.push(bookLink)}>
           <strong> {params.value} </strong>
         </a>;
         return link;

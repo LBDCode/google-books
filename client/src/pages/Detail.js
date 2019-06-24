@@ -8,6 +8,8 @@ import { GenModal, MessageModal } from "../components/Message";
 import { Container } from "../components/Grid";
 import StarRatingComponent from 'react-star-rating-component';
 import API from "../utils/API";
+import Fire from "../config/Firebase";
+
 
 class Detail extends Component {
   state = {
@@ -23,14 +25,27 @@ class Detail extends Component {
     }
   };
 
-
-  componentDidMount() {
-    this.loadBook();
-  }
+  componentWillMount() {
+    Fire.auth().onIdTokenChanged(user => {
+      if (user && !Fire.auth().currentUser.isAnonymous) {
+        this.setState({
+          user: user.email
+        });
+      } else if (!user || Fire.auth().currentUser.isAnonymous) {
+        this.setState({
+          user: "guest@guest.com",
+        });
+      }
+      this.loadBook();
+    });  
+  };
 
   loadBook() {
     API.getBook(this.state.user, this.props.match.params.id)
-    .then(res => this.setState({ book: res.data[0] }))
+    .then(res => {
+      console.log(res);
+      this.setState({ book: res.data[0] });
+    })
     .catch(err => console.log(err));
   };
 

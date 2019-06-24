@@ -1,9 +1,6 @@
-import React from "react";
+import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import withFirebaseAuth from 'react-with-firebase-auth'
-import * as firebase from 'firebase/app';
-// import './firebase/auth';
-import firebaseConfig from './config/Firebase';
+import Fire from './config/Firebase';
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Saved from "./pages/Saved";
@@ -13,40 +10,83 @@ import Nav from "./components/Nav";
 
 
 
-function App() {
-  return (
-    <Router>
-      <div>
-        <Switch>
-          <Route exact path="/" render={props =>
-            <div>
-              <Nav />
-              <Home {...props}/>
-            </div> }
-          />
-          <Route exact path="/search" render={props =>
-            <div>
-              <Nav />
-              <Search {...props}/>
-            </div> }
-          />
-          <Route exact path="/saved" render={props =>
-            <div>
-              <Nav />
-              <Saved {...props}/>
-            </div> } 
-          />
-          <Route exact path="/books/:id" render={props =>
-            <div>
-              <Nav />
-              <Detail {...props}/>
-            </div> } 
-          />
-          <Route component={NoMatch} />
-        </Switch>
-      </div>
-    </Router>
-  );
+class App extends Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      user: "",
+      isAnonymous: false
+    };
+  };
+
+
+  componentDidMount() {
+    this.authListener();
+  };
+
+  componentWillMount() {
+    this.authListener();
+    // this.anonymousCheck();
+  };
+
+  // anonymousCheck() {
+  //   Fire.auth().onIdTokenChanged(user => {
+  //     this.setState({ isAnonymous: user.isAnonymous });
+  //   });
+  // };
+
+  authListener() {
+    Fire.auth().onIdTokenChanged(user => {
+      if (user) {
+        this.setState({ user });
+        localStorage.setItem("user", user.uid);
+        localStorage.setItem("isAnonymous", user.isAnonymous);
+      } else {
+        this.setState({ user: null });
+        localStorage.removeItem("user");
+        localStorage.removeItem("isAnonymous");
+      }
+    });
+  };
+
+
+  render() {
+    return (
+      <Router>
+        <div>
+          <Switch>
+            <Route exact path="/" render={props =>
+              <div>
+                <Nav {...props}/>
+                <Home {...props}/>
+              </div> }
+            />
+            <Route exact path="/search" render={props =>
+              <div>
+                <Nav {...props}/>
+                <Search {...props}/>
+              </div> }
+            />
+            <Route exact path="/saved" render={props =>
+              <div>
+                <Nav {...props}/>
+                <Saved {...props}/>
+              </div> } 
+            />
+            <Route exact path="/books/:id" render={props =>
+              <div>
+                <Nav {...props}/>
+                <Detail {...props}/>
+              </div> } 
+            />
+            <Route component={NoMatch} />
+          </Switch>
+        </div>
+      </Router>
+    );
+  
+  }
 }
 
 export default App;
