@@ -27,7 +27,6 @@
     "if-env": "^1.0.4",
     "mongoose": "^5.3.16",
     "nexmo": "^2.4.1",
-    "nodemailer": "^6.2.1",
-
+    "nodemailer": "^6.2.1"
   }
 }
