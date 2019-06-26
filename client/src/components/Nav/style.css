@@ -3,6 +3,12 @@
   padding: 10px;
 }
 
+.welcome-message {
+  color: #fff!important;
+  font-weight: 500;
+  font-size: 16px;
+}
+
 .cust-nav {
   background-color: #222!important;
 }
@@ -13,4 +19,46 @@
   text-transform: none;
   font-size: 30px;
   font-weight: 500;
+}
+
+.modal-content {
+  border: none;
+  border-radius: 0;
+} 
+
+.modal-header {
+  background-color: #4a4a4a;
+  border-radius: 0;
+}
+
+.auth-form {
+  margin: 10px;
+  padding: 10px;
+}
+
+/* .auth-title {
+  color: #333;
+} */
+
+.auth-input {
+  margin: 15px 0;
+}
+
+.auth-text {
+  font-size: 20px;
+  text-align: center;
+  margin:3px;
+}
+
+.auth-button-group {
+  margin: 20px 0;
+}
+
+.auth-button {
+  margin: 5px 0;
+  font-size: 18px!important;
+}
+
+.text-muted {
+  color:#dc3545!important;
 }

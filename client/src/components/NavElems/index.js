@@ -12,11 +12,20 @@ export function Navbar({ children }) {
 
 export function NavListRight({ children }) {
     return (
-      <div className="navbar-collapse collapse dual-nav w-50 order-2">
-        <ul className="nav navbar-nav ml-auto"> {children}</ul>
+      <div className="navbar-collapse collapse dual-nav w-50 order-1 order-md-2">
+        <ul className="nav navbar-nav ml-auto welcome-message"> {children}</ul>
       </div>  
 
     );
+}
+
+export function NavListCenter({ children }) {
+  return (
+    <div className="navbar-collapse collapse dual-nav w-100 order-2 order-md-1">
+      <ul className="nav navbar-nav mx-auto "> {children}</ul>
+    </div>  
+
+  );
 }
 
 export function NavListItem({ children}) {
