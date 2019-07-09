@@ -2,7 +2,6 @@ import React, { Component, useEffect, useRef }  from "react";
 import {createPortal} from "react-dom";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
-import Modal from "react-bootstrap/Modal";
 import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import FormControl from 'react-bootstrap/FormControl'
@@ -162,7 +161,7 @@ export class MessageModal extends Component {
                 </Row>
                 <Row className="message-book" >
                     <Col xs={{span: 12, order: 2}} sm={{span: 3, order: 1}}>
-                        <img className="message-image" src={this.state.share.imgLink}/>
+                        <img className="message-image" src={this.state.share.imgLink} alt="cover art"/>
                     </Col>
                     <Col xs={{span: 12, order: 1}} sm={{span: 8, order: 2}}>
                         <div >

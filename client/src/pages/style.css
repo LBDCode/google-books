@@ -139,4 +139,44 @@
     }
 }
 
+.no-match-message {
+    margin: 0 auto;
+    background-color: #22222263;
+    padding: 50px;
+}
+
+.no-match-text-large {
+    font-size: 60px;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.no-match-text-small {
+    margin: 20px;
+    color: #fff;
+    font-size: 30px;
+    font-weight: 400; 
+}
+
+@media only screen and (max-width: 470px) {
+
+    .no-match-message {
+        padding: 20px;
+    }
+
+    .no-match-text-large {
+        font-size: 40px;
+        font-weight: 600;
+        margin: 10px;
+        color: #fff;
+    }
+    
+    .no-match-text-small {
+        margin: 10px;
+        font-size: 30px;
+        font-weight: 400; 
+        color: #222;
+    }
+}    
+
 

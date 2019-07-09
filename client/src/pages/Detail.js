@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import {browserHistory} from "react-router";
 import Row from 'react-bootstrap/Row'
 import Col from 'react-bootstrap/Col'
 import Button from "react-bootstrap/Button";
@@ -76,8 +75,7 @@ class Detail extends Component {
   };
 
   onModalClick= (p) => {
-    var share = {...share};
-    share = {
+    var share = {
       title: p.title,
       author: p.author,
       link: p.previewURL,
@@ -148,7 +146,7 @@ class Detail extends Component {
             </div>
           </Col>
           <Col xs={{span: 6, order: 1}} md={{span: 4, order: 2}}>
-            <img style={{marginTop: '20px', marginLeft: '10px', width: '110px', height: '155px'}} src={this.state.book.imageURL}/>
+            <img style={{marginTop: '20px', marginLeft: '10px', width: '110px', height: '155px'}} src={this.state.book.imageURL} alt="cover art"/>
             <p style={{marginTop: '20px'}}>
               <Link to="/saved">Back to saved books</Link>
             </p>

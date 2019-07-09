@@ -44,7 +44,7 @@ export function CheckBox(props) {
   return(
     <div className="form-check">
       <input className="form-check-input" type="radio" {...props}/>
-      <label className="form-check-label" for={props.id}>{props.text}</label>
+      <label className="form-check-label" htmlFor={props.id}>{props.text}</label>
     </div>
   )
 }

@@ -1,6 +1,5 @@
-
 import React, { Component } from "react";
-import {Jumbotron, SmallJumbotron} from "../components/Jumbotron";
+import { Jumbotron } from "../components/Jumbotron";
 import {Card} from "../components/Card";
 import { Col, Row, Container } from "../components/Grid";
 import "../style.css";

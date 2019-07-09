@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import API from "../utils/API";
 import Fire from "../config/Firebase";
-import { Link, BrowserRouter } from "react-router-dom";
 import { GenModal, MessageModal } from "../components/Message";
 import Button from "react-bootstrap/Button";
 import StarRatingComponent from 'react-star-rating-component';
@@ -57,9 +56,7 @@ class Saved extends Component {
         this.loadBooks()
       })
     };
-  
-
-    
+      
     loadBooks = () => {
       API.getUserBooks(this.state.user)
         .then(res => {
@@ -83,8 +80,7 @@ class Saved extends Component {
     };
 
     onModalClick= (p) => {
-      let share = {...share};
-      share = {
+      var share = {
         title: p.data.title,
         author: p.data.author,
         link: p.data.previewURL,

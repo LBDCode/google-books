@@ -80,7 +80,10 @@ class App extends Component {
                 <Detail {...props}/>
               </div> } 
             />
-            <Route component={NoMatch} />
+            <Route render={props =>
+              <NoMatch {...props}/>
+            }
+             />
           </Switch>
         </div>
       </Router>

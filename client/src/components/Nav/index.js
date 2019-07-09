@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { Link } from "react-router-dom";
-import {browserHistory} from "react-router";
 import Fire from "../../config/Firebase";
 import API from "../../utils/API";
 import { Navbar, NavListRight, NavListItem, NavListCenter } from "../NavElems"
@@ -9,10 +8,7 @@ import Button from "react-bootstrap/Button";
 import Tabs from "react-bootstrap/Tabs";
 import Tab from "react-bootstrap/Tabs";
 import Form from "react-bootstrap/Form";
-// import { Modal, ModalTabList } from "../Login";
-import { LoginInput, FormBtn } from "../Form";
 import "./style.css";
-import fire from '../../config/Firebase';
 
 
 class Nav extends Component {
@@ -210,7 +206,7 @@ class Nav extends Component {
               </NavListItem>
               <NavListItem>
                 {(this.state.user === null || this.state.user === "guest@guest.com") ?
-                  <Link className="nav-link cust-link" onClick={this.handleShow}>sign in</Link>
+                  <Link to="" className="nav-link cust-link" onClick={this.handleShow}>sign in</Link>
                 :
                   <Link to="" className="nav-link cust-link" onClick={this.handleSignOut} >sign out</Link>
                 }
