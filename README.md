@@ -1,5 +1,7 @@
 # Bibliofile - Keep your reading list organized and up to date!
-Search through over 2.5M indexed books with the Google Books API, save and rate books you're interested in, and email or text reading suggestions to your friends!  
+Search through over 2.5M indexed books with the Google Books API, save and rate books you're interested in, and email or text reading suggestions to your friends!
+
+![bibliofile](https://libby.tech/images/portfolio/bibliofile.png)
 
 
 ### Link to Website
