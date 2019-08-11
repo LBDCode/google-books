@@ -1,4 +1,5 @@
-# Bibliofile 
+# Bibliofile - Keep your reading list organized and up to date!
+Search through over 2.5M indexed books with the Google Books API, save and rate books you're interested in, and email or text reading suggestions to your friends!  
 
 
 ### Link to Website
@@ -7,8 +8,9 @@ www.bibliofile.com
 
 ### Technologies Used
 
-Node.js, Express, MongoDB, React, Javascript, HTML5, CSS3,React-Bootstrap,
-Mongoose, Twilio, Nodemailer, Dotenv, Firebase Authentication,
-Hosting on AWS EC2 using Docker.
+React, MongoDB, Node.js, Express, HTML5, CSS3, React-Bootstrap,
+Mongoose, ag-Grid, Nexmo, Nodemailer, Dotenv, Firebase Authentication, Google Books API
+
+Hosted on AWS EC2 using Docker.
 
 ---
