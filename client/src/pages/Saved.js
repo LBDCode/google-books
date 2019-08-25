@@ -121,7 +121,7 @@ class Saved extends Component {
           />
         return stars;
       } else {
-        return null;
+        return <p className="no-stars">you haven't rated this book yet</p>;
       }
     };
 

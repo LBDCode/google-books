@@ -15,6 +15,11 @@
     font-size: 14px!important; 
 }
 
+.no-stars {
+    white-space: normal;
+    line-height: 1.5;
+}
+
 .btn-home {
     background-color: #22b24c;
     margin: 2px;

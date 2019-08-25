@@ -182,7 +182,7 @@ class Nav extends Component {
     if(this.state.userName === "" || this.state.userName === "Guest") {
       return "Guest Account"
     } else {
-      return `Welcome back, ${this.state.userName}`
+      return `welcome back, ${this.state.userName}`
     }
   }
 
@@ -198,23 +198,23 @@ class Nav extends Component {
           </div>
 
           <NavListCenter>
-            <NavListItem>
-                <Link to={"/search"} className="nav-link cust-link" href="/search">search</Link>
-              </NavListItem>
-              <NavListItem>
-                <Link to={"/saved"}className="nav-link cust-link" href="/saved">library</Link>
-              </NavListItem>
-              <NavListItem>
-                {(this.state.user === null || this.state.user === "guest@guest.com") ?
-                  <Link to="" className="nav-link cust-link" onClick={this.handleShow}>sign in</Link>
-                :
-                  <Link to="" className="nav-link cust-link" onClick={this.handleSignOut} >sign out</Link>
-                }
-              </NavListItem>
+            <h5 className="welcome-message">{this.handleWelcome()}</h5>
           </NavListCenter>
 
           <NavListRight>
-            <>{this.handleWelcome()}</>
+            <NavListItem>
+              <Link to={"/search"} className="nav-link cust-link" href="/search">search</Link>
+            </NavListItem>
+            <NavListItem>
+              <Link to={"/saved"}className="nav-link cust-link" href="/saved">library</Link>
+            </NavListItem>
+            <NavListItem>
+              {(this.state.user === null || this.state.user === "guest@guest.com") ?
+                <Link to="" className="nav-link cust-link" onClick={this.handleShow}>sign in</Link>
+              :
+                <Link to="" className="nav-link cust-link" onClick={this.handleSignOut} >sign out</Link>
+              }
+            </NavListItem>
           </NavListRight>
 
           <Modal className="auth-modal" show={this.state.show} onHide={this.handleClose}>
