@@ -6,7 +6,7 @@ Search through over 2.5M indexed books with the Google Books API, save and rate 
 
 ### Link to Website
 
-www.bibliofile.com
+www.bibliofile.info
 
 ### Technologies Used
 
