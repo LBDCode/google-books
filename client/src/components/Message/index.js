@@ -28,7 +28,7 @@ export const GenModal = ( props ) => {
         return () => modalRoot.removeChild(elemRef.current);
     }, []);
 
-    return createPortal(<aside aria-modal="true" tabIndex="-1" onClick={props.clickAway} className="custom-modal-cover"><div className="custom-modal" ref={props.modalRef} onClick={null}>{props.children}</div></aside>, elemRef.current);
+    return createPortal(<aside tabIndex="-1" onClick={props.clickAway} className="custom-modal-cover"><div className="custom-modal" ref={props.modalRef} onClick={null}>{props.children}</div></aside>, elemRef.current);
 };
 
 
